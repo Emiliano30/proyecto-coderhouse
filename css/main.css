@@ -82,8 +82,9 @@ section div img {
     right: 0;
     display: grid;
     grid-auto-rows: 50px;
+    overflow: hidden;
 
-    clip-path: circle(0% at top left);
+    clip-path: circle(0% at 0 0);
     transition: clip-path 0.5s;
 }
 
@@ -118,7 +119,7 @@ section div img {
 }
 
 .menu-toggle:checked ~ .menu-lista {
-    clip-path: circle(150% at top left);
+    clip-path: circle(150% at 0 0);
 }
 
 .botones{
