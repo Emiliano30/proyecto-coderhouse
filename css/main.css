@@ -133,6 +133,7 @@ section div img {
     height: 50px;
     display:flex;
     justify-content: center;
+    padding: 3px;
     align-items: center;
     cursor: pointer;
     background-color: transparent;
