@@ -83,7 +83,7 @@ section div img {
     right: 0;
     display: grid;
     grid-auto-rows: 50px;
-    overflow: hidden;
+    
 
     clip-path: circle(0% at 0 0);
     transition: clip-path 0.5s;
@@ -310,34 +310,34 @@ section .title {
 }
 
 
-.disciplinas .crossfit::after { content: "Crossfit"; }
-.disciplinas .funcional::after { content: "Funcional"; }
-.disciplinas .levantamiento::after { content: "Levantamiento"; }
-.disciplinas .boxeo::after { content: "Boxeo"; }
-.disciplinas .natacion::after { content: "Natacion"; }
-.disciplinas .spinning::after { content: "Spinning"; }
-.disciplinas .yoga::after { content: "Yoga"; }
+.disciplinas .crossfit::after { content: attr(data-nombre); }
+.disciplinas .funcional::after { content: attr(data-nombre); }
+.disciplinas .levantamiento::after { content: attr(data-nombre); }
+.disciplinas .boxeo::after { content: attr(data-nombre); }
+.disciplinas .natacion::after { content: attr(data-nombre); }
+.disciplinas .spinning::after { content: attr(data-nombre); }
+.disciplinas .yoga::after { content: attr(data-nombre); }
 
 .disciplinas .crossfit:hover::after {
-    content: "Crossfit es un entrenamiento que combina cardio y fuerza donde se puede trabajar en todas las partes del cuerpo y se puede trabajar en todas las partes del cuerpo";
+    content: attr(data-descripcion);
 }
 .disciplinas .funcional:hover::after {
-    content: "Funcional es un entrenamiento que combina cardio y fuerza donde se puede trabajar en todas las partes del cuerpo y se puede trabajar en todas las partes del cuerpo";
+    content: attr(data-descripcion);
 }
 .disciplinas .levantamiento:hover::after {
-    content: "Levantamiento es un entrenamiento que combina cardio y fuerza donde se puede trabajar en todas las partes del cuerpo y se puede trabajar en todas las partes del cuerpo";
+    content: attr(data-descripcion);
 }
 .disciplinas .boxeo:hover::after {
-    content: "Boxeo es un entrenamiento que combina cardio y fuerza donde se puede trabajar en todas las partes del cuerpo y se puede trabajar en todas las partes del cuerpo";
+    content: attr(data-descripcion);
 }
 .disciplinas .natacion:hover::after {
-    content: "Natacion es un entrenamiento que combina cardio y fuerza donde se puede trabajar en todas las partes del cuerpo y se puede trabajar en todas las partes del cuerpo";
+    content: attr(data-descripcion);
 }
 .disciplinas .spinning:hover::after {
-    content: "Spinning es un entrenamiento que combina cardio y fuerza donde se puede trabajar en todas las partes del cuerpo y se puede trabajar en todas las partes del cuerpo";
+    content: attr(data-descripcion);
 }
 .disciplinas .yoga:hover::after {
-    content: "Yoga es un entrenamiento que combina cardio y fuerza donde se puede trabajar en todas las partes del cuerpo y se puede trabajar en todas las partes del cuerpo";
+    content: attr(data-descripcion);
 }
 
 /* SECTION SERVICIOS */
@@ -644,52 +644,21 @@ footer p {
     display: block;
 }
 
-/* PAGINA PRECIOS */
-.page-precios {
+
+
+/* CONFIGURACION GENERAL PARA LAS PAGINAS */
+
+.page-horarios,.page-precios,.page-ubicaciones,.page-galeria {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-.precios {
-    flex: 1;
-    padding: 2rem;
-}
-
-/* PAGINA HORARIOS */
-
-.page-horarios {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.horarios {
-    flex: 1;
-}
-
-/* PAGINA UBICACIONES */
-.page-ubicaciones {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.ubicaciones {
+.horarios,.precios,.ubicaciones,.galeria {
     flex: 1;
 }
 
 
-/* PAGINA GALERIA */
-.page-galeria {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.galeria {
-    flex: 1;
-}
 
 /* MEDIA QUERIES*/
 
