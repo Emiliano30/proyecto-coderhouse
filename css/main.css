@@ -1,0 +1,863 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #120026 0%, #2A002B 50%, #2A0012 100%);
+    color: #fff;
+    font-family: 'Tilt Neon', sans-serif;
+}
+
+
+.grid div img,
+section div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* HEADER */
+.header {
+    background-image: url('../img/Fondo_Header_Gimnasio_Alternativo.png');
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    padding: 1rem 0.5rem;
+    color: #fff;
+}
+
+.menu {
+    height: 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-icono-label {
+    cursor: pointer;
+    display: inline-block;
+    color: #a000ff;
+}
+
+.menu-icono-label .icono-menu{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border: 2px solid #a000ff;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 5px;
+    
+}
+
+.menu-lista {
+    height: 100%;
+    background-color: #11001c;
+    padding-left: 0;
+    padding-top: 10px;
+    text-align: center;
+    list-style: none;
+
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    top: 80px;
+    right: 0;
+    display: grid;
+    grid-auto-rows: 50px;
+
+    clip-path: circle(0% at top left);
+    transition: clip-path 0.5s;
+}
+
+.menu-lista li a ,.header h1 a{
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.menu-lista li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #a200ff, #ff00f7);
+    box-shadow: 0 0 10px #ff00ff;
+    transition: width 0.4s ease;
+}
+
+.menu-lista li:hover a {
+    text-shadow:
+        0 0 5px #b100ff,
+        0 0 10px #ff00ff,
+        0 0 20px #a000ff;
+}
+
+.menu-lista li:hover a::after {
+    width: 100%;
+}
+
+.menu-toggle:checked ~ .menu-lista {
+    clip-path: circle(150% at top left);
+}
+
+.botones{
+    display: flex;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+.boton{
+    position:relative;
+    width: 150px;
+    height: 50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+    text-shadow:
+        0 0 5px #b100ff,
+        0 0 10px #ff00ff,
+        0 0 20px #a000ff;
+}
+
+.boton span{
+    z-index: 2;
+}
+
+.boton svg{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    fill:none;
+    border-radius: 5px;
+    
+}
+
+.boton svg rect{
+    width:100%;
+    height:100%;
+    stroke: #a000ff;
+    stroke-width: 6px;
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    transition: all .6s ease;
+}
+
+.boton:hover svg rect{
+    stroke-dashoffset: 0;
+    filter: drop-shadow(0 0 10px #ff00ff);
+    transition: all .6s ease;
+}
+
+
+/* MAIN */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    justify-items: stretch;
+}
+
+
+.imagen1 { grid-column: 1/2; grid-row: 1/2; }
+.imagen2 { grid-column: 1/2; grid-row: 2/3; }
+.imagen3 { grid-column: 1/2; grid-row: 3/4; }
+
+.texto1 { grid-column: 1/2; grid-row: 1/2; }
+.texto2 { grid-column: 1/2; grid-row: 2/3; }
+.texto3 { grid-column: 1/2; grid-row: 3/4; }
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* SECTION DISCIPLINAS */
+.disciplinas {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto repeat(7, 1fr);
+    justify-items: center;
+    row-gap: 50px;
+    padding-bottom: 50px;
+    margin-top: 50px;
+}
+
+.disciplinas::before{
+    position:absolute;
+    content:"";
+    background-image: url("../img/fondo_pared_ladrillos_negro_neon_transparente.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    inset: 0;
+    opacity: 0.2;
+}
+
+section .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    border: 4px solid rgb(231, 215, 239);
+    padding: 1rem 0;
+    border-radius: 1rem;
+    font-size: 2rem;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    z-index: 1;
+
+    box-shadow:
+        0px 0px 10px rgb(210, 178, 243),
+        0px 0px 20px purple,
+        0px 0px 30px indigo,
+        0px 0px 40px blue,
+        0px 0px 10px rgb(210, 178, 243) inset,
+        0px 0px 20px purple inset,
+        0px 0px 30px indigo inset,
+        0px 0px 40px blue inset;
+
+    text-shadow:
+        0px 0px 20px rgb(210, 178, 243),
+        0px 0px 30px purple,
+        0px 0px 40px indigo,
+        0px 0px 50px blue;
+}
+
+.disciplinas .tarjeta {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    border-radius: 10px;
+
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow:
+        -10px 10px 25px rgba(0, 0, 0, 0.7),
+        10px -10px 20px rgba(120, 80, 255, 0.25);
+}
+
+.disciplinas .tarjeta:hover {
+    transform: scale(1.04);
+    box-shadow:
+        -20px 25px 40px rgba(0, 0, 0, 0.8),
+        10px -10px 35px rgba(160, 100, 255, 0.4);
+}
+
+.disciplinas .tarjeta::after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    font-size: 1.5rem;
+
+    color: white;
+    background: #000000a1;
+
+    transition: height 0.5s ease;
+}
+
+.disciplinas .tarjeta:hover::after {
+    height: 100%;
+    text-align: center;
+    line-height: 30px;
+    justify-content: center;
+    padding: 0 20px;
+    font-size: 1rem;
+}
+
+
+.disciplinas .crossfit::after { content: "Crossfit"; }
+.disciplinas .funcional::after { content: "Funcional"; }
+.disciplinas .levantamiento::after { content: "Levantamiento"; }
+.disciplinas .boxeo::after { content: "Boxeo"; }
+.disciplinas .natacion::after { content: "Natacion"; }
+.disciplinas .spinning::after { content: "Spinning"; }
+.disciplinas .yoga::after { content: "Yoga"; }
+
+.disciplinas .crossfit:hover::after {
+    content: "Crossfit es un entrenamiento que combina cardio y fuerza donde se puede trabajar en todas las partes del cuerpo y se puede trabajar en todas las partes del cuerpo";
+}
+.disciplinas .funcional:hover::after {
+    content: "Funcional es un entrenamiento que combina cardio y fuerza donde se puede trabajar en todas las partes del cuerpo y se puede trabajar en todas las partes del cuerpo";
+}
+.disciplinas .levantamiento:hover::after {
+    content: "Levantamiento es un entrenamiento que combina cardio y fuerza donde se puede trabajar en todas las partes del cuerpo y se puede trabajar en todas las partes del cuerpo";
+}
+.disciplinas .boxeo:hover::after {
+    content: "Boxeo es un entrenamiento que combina cardio y fuerza donde se puede trabajar en todas las partes del cuerpo y se puede trabajar en todas las partes del cuerpo";
+}
+.disciplinas .natacion:hover::after {
+    content: "Natacion es un entrenamiento que combina cardio y fuerza donde se puede trabajar en todas las partes del cuerpo y se puede trabajar en todas las partes del cuerpo";
+}
+.disciplinas .spinning:hover::after {
+    content: "Spinning es un entrenamiento que combina cardio y fuerza donde se puede trabajar en todas las partes del cuerpo y se puede trabajar en todas las partes del cuerpo";
+}
+.disciplinas .yoga:hover::after {
+    content: "Yoga es un entrenamiento que combina cardio y fuerza donde se puede trabajar en todas las partes del cuerpo y se puede trabajar en todas las partes del cuerpo";
+}
+
+/* SECTION SERVICIOS */
+
+.profesores .title,
+.contactos .title,
+.servicios .title {
+    margin: 0 auto;
+}
+
+.servicios {
+    padding-top: 50px;
+    text-align: center;
+
+}
+
+.servicios .row {
+    row-gap: 2rem;
+}
+
+.servicios .title {
+    box-shadow:
+        0px 0px 10px #c00fa5,
+        0px 0px 20px #bd11a3a7,
+        0px 0px 30px #c103a5a0,
+        0px 0px 40px #c103a5a0,
+        0px 0px 10px #c00fa5 inset,
+        0px 0px 20px #bd11a3a7 inset,
+        0px 0px 30px #c103a5a0 inset,
+        0px 0px 40px #c103a5a0 inset;
+
+    text-shadow:
+        0 0 6px #c00fa5,
+        0 0 12px #bd11a3a7,
+        0 0 22px #c103a5a0,
+        0 0 40px #e806c6d3;
+}
+
+.servicios .container-fluid {
+    padding-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.servicios .card {
+    background: none;
+    height: 190px;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    border-radius: 1rem;
+    border: 2px solid #8e017940;
+    box-shadow:
+        -10px 10px 25px rgba(0, 0, 0, 0.7),
+        10px -10px 20px #8e017940;
+    transition: box-shadow 0.4s ease, border 0.4s ease;
+}
+
+.servicios .card:hover {
+    border-color: #8e017940;
+    box-shadow:
+        -10px 10px 25px rgba(0, 0, 0, 0.7) inset,
+        10px -10px 20px #8e017940 inset;
+}
+
+.servicios .card .card-body {
+    color: #ffffff;
+    padding: 2rem;
+}
+
+.servicios .card .card-body .material-symbols-outlined {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-shadow:
+        0 0 10px #7A072Eb5,
+        0 0 15px #7A072Ea5,
+        0 0 20px #940383a9;
+    transition: text-shadow 0.4s ease;
+}
+
+.servicios .card .card-body .card-title {
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    text-shadow:
+        0 0 10px #7A072Eb5,
+        0 0 15px #7A072Ea5,
+        0 0 20px #940383a9;
+}
+
+.servicios .card .card-body .card-text {
+    color: #ffffffd9;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* SECTION PROFESORES */
+.profesores {
+    padding-top: 50px;
+    position:relative;
+    
+}
+
+.profesores::before{
+    position: absolute;
+    content:"";
+    background-image: url("../img/gemini-2.5-flash-image-preview\ \(nano-banana\)_generame_otra_imagen\ \(1\).png");
+    opacity: 0.1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    inset: 0;
+}
+
+.profesores .title {
+    text-shadow:
+        0px 0px 10px #bb1a5ace,
+        0px 0px 20px #ec2373b1,
+        0px 0px 30px #ec237389,
+        0px 0px 40px #dd28707e;
+    box-shadow:
+        0px 0px 10px #bb1a5ace,
+        0px 0px 20px #ec2373b1,
+        0px 0px 30px #ec237389,
+        0px 0px 40px #dd28707e,
+        0px 0px 10px #bb1a5ab0 inset,
+        0px 0px 20px #ec2373a9 inset,
+        0px 0px 30px #ec2373a5 inset,
+        0px 0px 40px #dd2870cd inset;
+}
+
+.profesores .carousel {
+    margin: 1rem 0;
+    padding: 2rem 0;
+}
+
+.profesores .card2 {
+    display: none;
+}
+
+.profesores .carousel .carousel-item{
+    padding-top: 2rem;
+    height: 550px;
+}
+
+.profesores .card {
+    margin: 0 auto;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.607);
+    width: 300px;
+    height: 500px;
+    border-radius: 1rem;
+    position: relative;
+    
+    box-shadow:
+        -10px 10px 25px #000000b3,
+        5px -5px 20px #83083db3;
+}
+
+.profesores .card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.profesores .card .card-body .imagen-profesor {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+     box-shadow:
+        10px -10px 25px #000000b3,
+        -5px 5px 20px #83083db3;
+}
+.profesores .card .card-body .imagen-profesor img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+/* SECTION CONTACTOS */
+.contactos {
+    margin-bottom: 2rem;
+}
+
+.contactos .title {
+    text-transform: uppercase;
+    text-shadow:
+        0px 0px 10px #ea1c1c,
+        0px 0px 20px #b31459,
+        0px 0px 30px #850e0e,
+        0px 0px 40px #870e0e;
+    box-shadow:
+        0px 0px 10px #bb1a1a,
+        0px 0px 20px #b31459,
+        0px 0px 30px #850e0e,
+        0px 0px 40px #870e0e,
+        0px 0px 10px #bb1a1a inset,
+        0px 0px 20px #b31459 inset,
+        0px 0px 30px #850e0e inset,
+        0px 0px 40px #870e0e inset;
+    margin-bottom: 2rem;
+}
+
+.contactos .formulario {
+    margin-bottom: 2rem;
+}
+
+.contactos .formulario input,
+.contactos .formulario textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 2px solid #870e0e;
+    border-radius: 1rem;
+    transition: box-shadow 0.4s ease, border 0.4s ease;
+}
+
+.contactos .formulario input:hover,
+.contactos .formulario textarea:hover {
+    border-color: #870e0e;
+    box-shadow:
+        0px 0px 25px #870e0e;
+}
+
+.contactos .formulario form button {
+    background-color: #870e0e;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    width: 50%;
+    margin: 0 auto;
+    border: 2px solid #870e0e;    
+    transition: box-shadow 0.4s ease, border 0.4s ease;
+}
+
+.contactos .formulario form button:hover {
+    border-color: #870e0e;
+    box-shadow:
+        -10px 10px 25px rgba(0, 0, 0, 0.7) inset,
+        10px -10px 20px #870e0e inset;
+}
+
+.contactos .mapa iframe {
+    padding: 1.5rem 0;
+}
+
+.contactos .mapa button {
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    width: 50%;
+    border: 2px solid #870e0e;
+    transition: box-shadow 0.4s ease, border 0.4s ease;
+    position:relative;
+    overflow: hidden;
+}
+
+.contactos .mapa button:hover {
+    border-color: #870e0e;
+    box-shadow:
+        -10px 10px 25px rgba(0, 0, 0, 0.7) inset,
+        10px -10px 20px #870e0e inset;
+}
+
+.contactos .mapa button a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.contactos .mapa button::after{
+    position:absolute;
+    content:"";
+    width: 400px;
+    border-bottom: 45px solid #870e0e;
+    border-right: 50px solid transparent;
+    top: 0;
+    left: -395px;
+    z-index: -1;
+    transition: all 0.6s ease;
+}
+
+.contactos .mapa button:hover::after{
+    left: 0;
+    transition: all 0.6s ease;
+}
+
+/* FOOTER */
+footer {
+    background-color: #050014;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: auto;
+}
+
+footer p {
+    padding-top: 10px;
+    display: block;
+}
+
+/* PAGINA PRECIOS */
+.page-precios {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.precios {
+    flex: 1;
+    padding: 2rem;
+}
+
+/* PAGINA HORARIOS */
+
+.page-horarios {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.horarios {
+    flex: 1;
+}
+
+/* PAGINA UBICACIONES */
+.page-ubicaciones {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.ubicaciones {
+    flex: 1;
+}
+
+
+/* PAGINA GALERIA */
+.page-galeria {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.galeria {
+    flex: 1;
+}
+
+/* MEDIA QUERIES*/
+
+@media screen and (min-width: 768px) {
+
+    /* MAIN */
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, repeat(auto-fit, minmax(250px, 1fr)));
+    }
+
+    .imagen1 { grid-column: 1/2; grid-row: 1/2; flex: 1 0 0; }
+    .imagen2 { grid-column: 2/3; grid-row: 2/3; flex: 1 0 0; }
+    .imagen3 { grid-column: 1/2; grid-row: 3/4; flex: 1 0 0; }
+
+    .texto1 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        flex: 1 0 0;
+        transform: translateX(100%);
+        transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+    }
+
+    .texto2 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        flex: 1 0 0;
+        transform: translateX(-100%);
+        transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+    }
+
+    .texto3 {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        flex: 1 0 0;
+        transform: translateX(100%);
+        transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+    }
+
+    .text {
+        background: none;
+        color: #fff;
+    }
+
+    .text h2 {
+        text-shadow:
+            0 0 12px rgba(107, 107, 107, 0.9),
+            0 0 25px rgba(59, 81, 156, 0.8),
+            0 0 40px rgba(0, 17, 255, 0.6);
+    }
+
+    .text p {
+        text-shadow:
+            2px 2px 6px rgba(180, 180, 200, 0.9),
+            4px 4px 10px rgba(120, 120, 150, 0.7);
+    }
+
+    /* DISCIPLINAS */    
+    .disciplinas {
+        grid-template-columns: repeat(3, minmax(150px, 1fr));
+        grid-template-rows: auto repeat(3, 1fr);
+        grid-template-areas:
+            "title title title"
+            "crossfit funcional levantamiento"
+            "boxeo natacion spinning"
+            ". yoga .";
+        row-gap: 40px;
+        column-gap: 20px;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .disciplinas .tarjeta {
+        position: relative;
+        width: 230px;
+        height: 350px;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .title { grid-area: title; margin-bottom: 3rem; }
+
+    .crossfit { grid-area: crossfit; }
+    .funcional { grid-area: funcional; }
+    .levantamiento { grid-area: levantamiento; }
+    .boxeo { grid-area: boxeo; }
+    .natacion { grid-area: natacion; }
+    .spinning { grid-area: spinning; }
+    .yoga { grid-area: yoga; }
+}
+
+@media screen and (min-width: 1024px) {
+
+    /* HEADER */
+    .menu-icono-label {
+        display: none;
+    }
+
+    .menu-lista {
+        position: static;
+        clip-path: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1.5rem;
+        font-size: 1rem;
+        background: none;
+    }
+
+    /* MAIN */
+    .grid {
+        height: 90vh;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, minmax(150px, 1fr));
+    }
+
+    /* DISCIPLINAS */
+
+    .disciplinas {
+        padding: 50px;
+    }
+    .disciplinas .tarjeta {
+        width: 350px;
+        height: 450px;
+    }
+
+    .disciplinas .title {
+        width: 32%;
+        padding: 1rem 0;
+        font-size: 2rem;
+        letter-spacing: 0.7rem;
+    }
+
+    .disciplinas .title h2 {
+        font-size: 2rem;
+    }
+
+    /* PROFESORES */
+    .profesores {
+        padding-bottom: 5rem;
+    }
+
+    .profesores .carousel .contenedor {
+        justify-content: space-evenly;
+    }
+    
+    .profesores .carousel .card2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center; 
+    }
+
+   
+    .profesores .card{
+        width: 350px;
+    }
+   
+
+    .profesores .title,
+    .contactos .title,
+    .servicios .title {
+        width: 30%;
+    }
+
+    /* CONTACTOS */
+    .contactos .mapa iframe {
+        width: 500px;
+        height: 320px;
+    }
+}
