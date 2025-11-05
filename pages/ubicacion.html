@@ -14,41 +14,50 @@
 </head>
 <body class="page-ubicaciones">
 
-     <header class="header">
-            <h1>FITPOWER</h1>
-            <nav class="menu">
-                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navegador">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <a class="navbar-brand logo" href="./index.html">FITPOWER</a>
 
-                <label for="menu-toggle" class="menu-icono-label">
+                <button
+                    class="navbar-toggler custom-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <i class="bi bi-list icono-menu"></i>
-                </label>
+                </button>
 
-                <ul id="menu-lista" class="menu-lista">
-                    <li><a class="menu-enlace " href="../index.html">INICIO</a></li>
-                    <li><a class="menu-enlace " href="../pages/precios.html">PRECIO</a></li>
-                    <li><a class="menu-enlace " href="../pages/horarios.html">HORARIOS</a></li>
-                    <li><a class="menu-enlace " href="../pages/galeria.html">GALERIA</a></li>
-                    <li><a class="menu-enlace " href="../pages/ubicacion.html">UBICACIONES</a></li>
-                    <div class="botones">
-                    <div class="boton">
-                        <span>SUSCRIBIRSE</span>
-                        <svg>
-                            <rect x="0" y="0" fill="none"></rect>
-                        </svg>
-                    </div>
-                    <div class="boton">
-                        <span>INICIAR SESION</span>
-                        <svg>
-                            <rect x="0" y="0" fill="none"></rect>
-                        </svg>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 menu-lista">
+                        <li class="nav-item"><a class="nav-link menu-enlace" href="../index.html">INICIO</a></li>
+                        <li class="nav-item"><a class="nav-link menu-enlace" href="../pages/precios.html">PRECIO</a></li>
+                        <li class="nav-item"><a class="nav-link menu-enlace" href="../pages/horarios.html">HORARIOS</a></li>
+                        <li class="nav-item"><a class="nav-link menu-enlace" href="../pages/galeria.html">GALERIA</a></li>
+                        <li class="nav-item"><a class="nav-link menu-enlace" href="../pages/ubicacion.html">UBICACIONES</a></li>
+                    </ul>
+
+                    <div class="botones d-flex flex-column flex-lg-row align-items-center gap-2 mt-3 mt-lg-0 ms-lg-3">
+                        <div class="boton">
+                            <span>SUSCRIBIRSE</span>
+                            <svg><rect x="0" y="0" fill="none"></rect></svg>
+                        </div>
+                        <div class="boton">
+                            <span>INICIAR SESIÓN</span>
+                            <svg><rect x="0" y="0" fill="none"></rect></svg>
+                        </div>
                     </div>
                 </div>
-                </ul>
-            </nav>
+            </div>
+        </nav>
     </header>
+
     <main>
         <h2>Ubicaciones</h2>
     </main>
+
     <footer>
         <p>© 2025 Gimnasio Alternativo. Todos los derechos reservados.</p>
         <div class="redes d-flex gap-3">
