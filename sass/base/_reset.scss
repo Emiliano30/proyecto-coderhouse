@@ -1,0 +1,15 @@
+@use "../utilities/variables" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, $body1-bg 0%, $body2-bg 50%, $body3-bg 100%);
+    color: $color-tipografia;
+    font-family: 'Tilt Neon', sans-serif;
+}

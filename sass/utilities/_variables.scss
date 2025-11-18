@@ -1,0 +1,87 @@
+//PALETA DE COLORES
+//BODY
+$body1-bg:#120026;
+$body2-bg:#2A002B;
+$body3-bg:#2A0012;
+//TEXTO
+$color-tipografia: #fff;
+//CARD BODY
+$card-body:#ffffff;
+$card-text:#ffffffd9;
+//FOOTER BACKGROUND
+$footer-bg:#050014;
+//MENU LISTA
+$menu-bg-lista:#11001c;
+//VIOLETAS
+$color-violeta1:#b100ff;
+$color-violeta2:#a000ff;
+$color-violeta3:#a200ff;
+$color-violeta4:#7850ff40;
+$color-violeta5:#a064ff66;
+//VIOLETA CLARO
+$color-violeta-claro1:#e7d7ef; 
+$color-violeta-claro2:#d2b2f3; 
+//ROSA
+$color-rosa1:#ff00ff;
+$color-rosa2:#ff00f7;
+$color-rosa3:#c00fa5;
+$color-rosa4:#bd11a3a7;
+$color-rosa5:#c103a5a0;
+$color-rosa6:#e806c6d3;
+$color-rosa7:#8e017940;
+//VINO
+$color-vino1:#7A072Eb5;
+$color-vino2:#7A072Ea5;
+$color-vino3:#940383a9;
+$color-vino4:#bb1a5ace;
+$color-vino5:#ec2373b1;
+$color-vino6:#ec237389;
+$color-vino7:#dd28707e;
+$color-vino8:#bb1a5ab0;
+$color-vino9:#ec2373a9;
+$color-vino10:#ec2373a5;
+$color-vino11:#dd2870cd;
+$color-vino12:#83083db3;
+//ROJO
+$color-rojo1:#ea1c1c;
+$color-rojo2:#b31459;
+$color-rojo3:#850e0e;
+$color-rojo4:#870e0e;
+$color-rojo5:#bb1a1a;
+//NEGRO
+$color-negro1:#00000080;
+$color-negro2:#000000b3;
+$color-negro3:#000000cc;
+$color-negro4:#000000a1;
+$color-negro5:#0000009b;
+//GRIS
+$color-gris1:#6b6b6be6;
+$color-gris2:#b4b4c8e6;
+$color-gris3:#787896b3;
+//PURPLE
+$color-purple:purple;
+//INDIGO
+$color-indigo:indigo;
+//BLUE
+$color-blue:blue;
+$color-blue2:#3b519ccc;
+$color-blue3:#0011ff99;
+
+
+//PALETA DE COLORES TARJETA PRECIOS
+$precio-bg-card:(
+    "rojo": #ff0000,
+    "rosa": #ff00ff,
+    "azul": #0011ff,
+);
+
+//PALETA DE COLORES HORARIOS
+$horarios-bg-boton:(
+    "azul": #0202f870,
+    "violeta": #892be26c,
+    "rosa": #e91e63a1,
+    "celeste": #00bcd4a1,
+    "verde": #4caf50a1,
+    "naranja": #ff9800a1,
+    "bordo": #c80909a1,
+);

@@ -1,0 +1,703 @@
+//MIXIN
+@use "../utilities/mixin" as *;
+//VARIABLES
+@use "../utilities/variables" as *;
+//ANIMACIONES
+@use "../utilities/animaciones" as *;
+
+
+/*HEADER*/
+.header{
+    .navegador{
+        @include imagen-bg("../../img/Fondo_Header_Gimnasio_Alternativo.png");
+        backdrop-filter: blur(8px);
+        padding: 0.5rem 1rem;
+
+        .container-fluid{
+            .logo{
+                font-size: 1.8rem;
+                font-weight: bold;
+                color: $color-tipografia !important;
+                text-decoration: none;
+                @include text-shadow-logo;
+                animation: text-flicker-in-glow 2s ease-in-out forwards;
+            }
+            .custom-toggler{
+                border: 2px solid $color-violeta2 !important;
+                color: $color-violeta2 !important;
+                background: none !important;
+                border-radius: 5px;
+                width: 3rem;
+                height: 3rem;
+                padding: 0;
+
+                &:focus{
+                    box-shadow: 0 0 10px $color-violeta2 !important;
+                }
+
+                .icono-menu{
+                    font-size: 2rem;
+                    color: $color-violeta2;
+                }
+            }
+
+            .colapsable{
+                .menu-lista{
+                    background-color: transparent !important;
+
+                    .nav-item{
+                        .nav-link{
+                            color: $color-tipografia !important;
+                            position: relative;
+                            display: inline-block;
+                            font-size: 1rem;
+                            margin: 0 0.5rem;
+                            transition: all 0.3s ease;
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+
+                            &::after{
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                bottom: -3px;
+                                width: 0%;
+                                height: 2px;
+                                background: linear-gradient(90deg, $color-violeta3, $color-rosa2);
+                                box-shadow: 0 0 10px $color-rosa1;
+                                transition: width 0.4s ease;
+                            }
+
+                            &:hover{
+                                @include shadow-link-boton;
+
+                                &::after{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .botones{
+                .boton{
+                    position: relative;
+                    width: 150px;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    background-color: transparent !important;
+                    color: $color-tipografia;
+                    @include shadow-link-boton;
+
+                    svg{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        fill: none;
+
+                        rect{
+                            width: 100%;
+                            height: 100%;
+                            stroke: $color-violeta2;
+                            stroke-width: 6px;
+                            stroke-dasharray: 400;
+                            stroke-dashoffset: 400;
+                            transition: all 0.6s ease;
+                            border-radius: 5px;
+                        }
+                    }
+
+                    &:hover{
+                        svg{
+                            rect{
+                                stroke-dashoffset: 0;
+                                filter: drop-shadow(0 0 10px $color-rosa1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* MAIN */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    justify-items: stretch;
+
+    .img{
+        img{
+            @include imagen
+        }
+    }
+
+    .imagen1 { grid-column: 1/2; grid-row: 1/2; }
+    .imagen2 { grid-column: 1/2; grid-row: 2/3; }
+    .imagen3 { grid-column: 1/2; grid-row: 3/4; }
+    .texto1 { grid-column: 1/2; grid-row: 1/2; }
+    .texto2 { grid-column: 1/2; grid-row: 2/3; }
+    .texto3 { grid-column: 1/2; grid-row: 3/4; }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+
+        color: $color-tipografia;
+        background-color: $color-negro1;
+    }
+
+}
+
+/*SECTION DISCIPLINAS*/
+.disciplinas {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto repeat(7, 1fr);
+    justify-items: center;
+    row-gap: 50px;
+    padding-bottom: 50px;
+    margin-top: 50px;
+
+    img{
+        @include imagen
+    }
+
+    &::before{
+        position:absolute;
+        content:"";
+        @include imagen-bg ("../img/fondo_pared_ladrillos_negro_neon_transparente.png");
+        inset: 0;
+        opacity: 0.2;
+    }
+
+    .title {
+        @include flex (flex,space-evenly,center);
+        width: 100%;
+        border: 4px solid $color-violeta-claro1;
+        padding: 1rem 0;
+        border-radius: 1rem;
+        font-size: 2rem;
+        letter-spacing: 0.4rem;
+        text-transform: uppercase;
+        z-index: 1;
+        @include shadow-disciplina;
+    }
+
+    .tarjeta {
+        position: relative;
+        width: 280px;
+        height: 400px;
+        border-radius: 10px;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        box-shadow:
+            -10px 10px 25px $color-negro2,
+            10px -10px 20px $color-violeta4;
+
+        &:hover {
+            transform: scale(1.04);
+            box-shadow:
+                -20px 25px 40px $color-negro3,
+                10px -10px 35px $color-violeta5;
+
+            &::after {
+                height: 100%;
+                text-align: center;
+                line-height: 30px;
+                justify-content: center;
+                padding: 0 20px;
+                font-size: 1rem;
+            }
+        }
+
+        &::after {
+            @include flex(flex,center,center);
+            height: 30%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-size: 1.5rem;
+            color: white;
+            background: $color-negro4;
+            transition: height 0.5s ease;
+        }
+    }
+
+    .crossfit{
+        &:hover{
+            &::after{
+                content: attr(data-descripcion);
+            }
+        }
+        &::after { content: attr(data-nombre); }
+
+    }
+    .funcional{
+        &:hover{
+            &::after{
+                content: attr(data-descripcion);
+            }
+        }
+        &::after { content: attr(data-nombre); }
+
+    } 
+    .levantamiento{
+        &:hover{
+            &::after{
+                content: attr(data-descripcion);
+            }
+        }
+        &::after { content: attr(data-nombre); }
+
+    } 
+    .boxeo{
+        &:hover{
+            &::after{
+                content: attr(data-descripcion);
+            }
+        }
+        &::after { content: attr(data-nombre); }
+
+    }
+    .natacion{
+        &:hover{
+            &::after{
+                content: attr(data-descripcion);
+            }
+        }
+        &::after { content: attr(data-nombre); }
+
+    } 
+    .spinning{
+        &:hover{
+            &::after{
+                content: attr(data-descripcion);
+            }
+        }
+        &::after { content: attr(data-nombre); }
+
+    } 
+    .yoga{
+        &:hover{
+            &::after{
+                content: attr(data-descripcion);
+            }
+        }
+        &::after { content: attr(data-nombre); }
+
+    }
+}
+
+/*SECTION SERVICIOS*/
+.servicios{
+    padding-top: 50px;
+    text-align: center;
+
+    .title{
+        @include flex (flex,space-evenly,center);
+        width: 100%;
+        border: 4px solid $color-violeta-claro1;
+        padding: 1rem 0;
+        border-radius: 1rem;
+        font-size: 2rem;
+        letter-spacing: 0.4rem;
+        text-transform: uppercase;
+        z-index: 1;
+        margin: 0 auto;
+        @include shadow-servicios;
+    }
+
+    .container-fluid{
+        padding-top: 4rem;
+        margin-bottom: 2rem;
+
+        .row{
+            row-gap: 2rem;
+
+            .card{
+                background: none;
+                height: 190px;
+                width: 100%;
+                max-width: 420px;
+                margin: 0 auto;
+                border-radius: 1rem;
+                border: 2px solid $color-rosa7;
+                box-shadow:
+                    -10px 10px 25px $color-negro2,
+                    10px -10px 20px $color-rosa7;
+                transition: box-shadow 0.4s ease, border 0.4s ease;
+
+                &:hover{
+                    border-color: $color-rosa7;
+                    box-shadow:
+                        -10px 10px 25px $color-negro2 inset,
+                        10px -10px 20px $color-rosa7 inset;
+                }
+
+                .card-body{
+                    color: $card-body;
+                    padding: 2rem;
+
+                    .material-symbols-outlined{
+                        font-size: 3rem;
+                        color: $card-body;
+                        margin-bottom: 1rem;
+                        @include shadow-icon-title;
+                        transition: text-shadow 0.4s ease;
+                    }
+
+                    .card-title{
+                        color: $card-body;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        margin-bottom: 0.5rem;
+                        @include shadow-icon-title;
+                    }
+
+                    .card-text{
+                        color: $card-text;
+                        font-size: 0.95rem;
+                        line-height: 1.6;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+/*SECTION PROFESORES*/
+.profesores{
+    padding-top: 50px;
+    position:relative;
+
+    &::before{
+        @include imagen-bg ("../img/gemini-2.5-flash-image-preview\ \(nano-banana\)_generame_otra_imagen\ \(1\).png");
+        position: absolute;
+        content:"";
+        opacity: 0.1;
+        inset: 0;
+    }
+    
+    .title{
+        @include flex (flex,space-evenly,center);
+        width: 100%;
+        border: 4px solid $color-violeta-claro1;
+        padding: 1rem 0;
+        border-radius: 1rem;
+        font-size: 2rem;
+        letter-spacing: 0.4rem;
+        text-transform: uppercase;
+        z-index: 1;
+        margin: 0 auto;
+        @include shadow-title-profesor;
+        
+       
+    }
+
+    .carousel{
+        margin: 1rem 0;
+        padding: 2rem 0;
+
+        .carousel-item{
+            padding-top: 2rem;
+            height: 550px;
+
+            .card{
+                margin: 0 auto;
+                color: $color-tipografia;
+                background: transparent;
+                width: 300px;
+                height: 500px;
+                border-radius: 1rem;
+                position: relative;
+                border: none;
+
+                .card-body{
+                    @include flex(flex,center,center);
+                    flex-direction: column;
+                    text-align: center;
+                    position: relative;
+                    
+
+                    h3{
+                        background-color: #7a072d;
+                        border-radius: 30px;
+                        color:$color-tipografia;
+                        position: absolute;
+                        top: 20px;
+                        right: 35px;
+                        padding: 1rem;
+                        font-size: 1.3rem;
+                        z-index: 2;
+                        box-shadow:
+                            -5px 5px 20px $color-negro2,
+                            3px -3px 20px $color-vino1;
+
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            border-top: 20px solid #7a072d;
+                            border-left: 20px solid transparent;
+                            border-right: 20px solid transparent;
+                            bottom: -19px;
+                            left: 30px;
+                        }
+
+                    }
+
+                
+                    p{
+                        display: inline-block;
+                        width: 80%;
+                        padding: 1rem 0;
+                        border-radius: 10px;
+                        background: black;
+                        color: white;
+                        position: absolute;
+                        bottom: 20px;
+                        box-shadow:
+                            -5px 5px 20px $color-negro2,
+                            3px -3px 20px $color-vino1;
+                    }
+
+                    .imagen-profesor{
+                        width: 250px;
+                        height: 250px;
+                        border-radius: 100%;
+                        img{
+                            @include imagen;
+                            border-radius: 100%;
+                        }
+                    }
+                }
+            }
+
+            .card2{
+                display: none;
+            }
+        }
+    }
+}
+
+/*SECTION CONTACTANOS*/
+.contactos{
+    margin-bottom: 2rem;
+
+    .title{
+        @include flex (flex,space-evenly,center);
+        width: 100%;
+        border: 4px solid $color-violeta-claro1;
+        padding: 1rem 0;
+        border-radius: 1rem;
+        font-size: 2rem;
+        letter-spacing: 0.4rem;
+        text-transform: uppercase;
+        z-index: 1;
+        margin: 0 auto;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        @include shadow-contacto;
+        
+
+    }
+
+    .container-fluid{
+        .row{
+            .formulario{
+                margin-bottom: 2rem;
+
+                h3{
+                    text-align: center;
+                }
+
+                .campo{
+                    position:relative;
+                    
+
+                    input{
+                        width: 100%;
+                        height: 60px;
+                        padding-top: 0.5rem;
+                        padding-left: 1.2rem;
+                        margin-bottom: 1rem;
+                        border: 3px solid rgb(208, 208, 208);
+                        border-radius: 1rem;
+                        outline: none;
+                        background-color: transparent;
+                        color:$color-tipografia;
+                        font-size: 1.3rem;
+                        box-shadow:
+                            0px 0px 10px $color-rojo5,
+                            0px 0px 20px $color-rojo2,
+                            
+                            0px 0px 5px $color-rojo5 inset,
+                            0px 0px 10px $color-rojo2 inset;
+                           
+
+                        &:hover + label,
+                        &:focus + label,
+                        &:not(:placeholder-shown) + label{
+                            top:0;
+                            transform:scale(0.8);
+                            
+                        }
+                        
+    
+                    }
+
+                
+
+                    label{
+                        position:absolute;
+                        top:30px;
+                        left:1rem;
+                        transform:translateY(-50%);
+                        color:$color-tipografia;
+                        transition:all 0.3s ease;
+                    }
+
+                }
+
+                textarea{
+                    width: 100%;
+                        height: 150px;
+                        padding-top: 0.5rem;
+                        padding-left: 1.2rem;
+                        margin-bottom: 1rem;
+                        border: 3px solid rgb(208, 208, 208);
+                        border-radius: 1rem;
+                        outline: none;
+                        background-color: transparent;
+                        color:$color-tipografia;
+                        font-size: 1.3rem;
+                        box-shadow:
+                            0px 0px 10px $color-rojo5,
+                            0px 0px 20px $color-rojo2,
+                            
+                            0px 0px 5px $color-rojo5 inset,
+                            0px 0px 10px $color-rojo2 inset;
+                }
+
+                button{
+                    background-color: $color-rojo4;
+                    color: $color-tipografia;
+                    padding: 0.5rem 1rem;
+                    border-radius: 1rem;
+                    width: 50%;
+                    margin: 0 auto;
+                    border: 2px solid $color-rojo4;    
+                    transition: box-shadow 0.4s ease, border 0.4s ease;
+
+                    &:hover{
+                        border-color: $color-rojo4;
+                        box-shadow:
+                            -10px 10px 25px $color-negro2 inset,
+                            10px -10px 20px $color-rojo4 inset;
+                    }
+                }
+            }
+
+            .mapa{ 
+                
+                h2{
+                    margin-bottom: 2rem;
+                }
+
+                .direccion{
+                    text-align: left;
+                    padding-left: 1rem;
+                    font-size: 1.2rem;
+                }
+
+                iframe{ 
+                    margin: 1rem auto;
+                    height: 300px;
+                    width: 90%;
+                    box-shadow:
+                        -5px 5px 20px $color-negro2,
+                        3px -3px 20px $color-vino1;
+                }
+                    
+
+                button{
+                    background-color: transparent;
+                    padding: 0.5rem 1rem;
+                    border-radius: 1rem;
+                    width: 50%;
+                    border: 2px solid $color-rojo4;
+                    transition: box-shadow 0.4s ease, border 0.4s ease;
+                    position:relative;
+                    overflow: hidden;
+                    margin: 0 auto;
+
+                    &:hover{
+                        border-color: $color-rojo4;
+                        box-shadow:
+                            -10px 10px 25px $color-negro2 inset,
+                            10px -10px 20px $color-rojo4 inset;
+
+                        &::after{
+                            left: 0;
+                            transition: all 0.6s ease;
+                        }
+                    }
+
+                    a{
+                        color: $color-tipografia;
+                        text-decoration: none;
+                        font-size: 1.2rem;
+                    }
+
+                    &::after{
+                        position:absolute;
+                        content:"";
+                        width: 400px;
+                        border-bottom: 45px solid $color-rojo4;
+                        border-right: 50px solid transparent;
+                        top: 0;
+                        left: -395px;
+                        z-index: -1;
+                        transition: all 0.6s ease;
+                    }
+                }
+            }
+            
+        }
+        
+    }
+}
+
+
+
+/*FOOTER*/
+footer{
+    background-color: $footer-bg;
+    height: 80px;
+    @include flex (flex, space-around, center);
+    margin-top: auto;
+
+    p{
+        padding-top: 10px;
+        display: block;
+    }
+}
+

@@ -1,0 +1,167 @@
+@use "./variables" as *;
+
+
+@mixin imagen{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@mixin imagen-bg ($url){
+    background-image: url($url);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+//SHADOWS DE HEADER
+@mixin text-shadow-logo{
+    text-shadow: 
+        0 0 10px $color-violeta1,
+        0 0 20px $color-rosa1,
+        0 0 40px $color-violeta2;
+}
+
+@mixin shadow-link-boton{
+    text-shadow:
+        0 0 5px  $color-violeta1,
+        0 0 10px $color-rosa1,
+        0 0 20px $color-violeta2;
+}
+
+//SHADOWS MAIN
+@mixin shadow-text-main{
+    text-shadow:
+            0 0 12px $color-gris1,
+            0 0 25px $color-blue2,
+            0 0 40px $color-blue3;
+}
+//SHADOWS SECCION DISCIPLINA
+@mixin shadow-disciplina{
+    box-shadow:
+        0px 0px 10px $color-violeta-claro2,
+        0px 0px 20px $color-purple,
+        0px 0px 30px $color-indigo,
+        0px 0px 40px $color-blue,
+        0px 0px 10px $color-violeta-claro2 inset,
+        0px 0px 20px $color-purple inset,
+        0px 0px 30px $color-indigo inset,
+        0px 0px 40px $color-blue inset;
+
+    text-shadow:
+        0px 0px 20px $color-violeta-claro2,
+        0px 0px 30px $color-purple,
+        0px 0px 40px $color-indigo,
+        0px 0px 50px $color-blue;
+}
+//SHADOWS SECCION SERVICIOS
+@mixin shadow-servicios{
+    box-shadow:
+        0px 0px 10px $color-rosa3,
+        0px 0px 20px $color-rosa4,
+        0px 0px 30px $color-rosa5,
+        0px 0px 40px $color-rosa5,
+        0px 0px 10px $color-rosa3 inset,
+        0px 0px 20px $color-rosa4 inset,
+        0px 0px 30px $color-rosa5 inset,
+        0px 0px 40px $color-rosa5 inset;
+
+    text-shadow:
+        0 0 6px $color-rosa3,
+        0 0 12px $color-rosa4,
+        0 0 22px $color-rosa5,
+        0 0 40px $color-rosa6;
+}
+
+@mixin shadow-icon-title{
+    text-shadow:
+        0 0 10px $color-vino1,
+        0 0 15px $color-vino2,
+        0 0 20px $color-vino3;
+}
+//SHADOWS SECCION PROFESORES
+@mixin shadow-title-profesor{
+    text-shadow:
+        0px 0px 10px $color-vino4,
+        0px 0px 20px $color-vino5,
+        0px 0px 30px $color-vino6,
+        0px 0px 40px $color-vino7;
+    box-shadow:
+        0px 0px 10px $color-vino4,
+        0px 0px 20px $color-vino5,
+        0px 0px 30px $color-vino6,
+        0px 0px 40px $color-vino7,
+        0px 0px 10px $color-vino8 inset,
+        0px 0px 20px $color-vino9 inset,
+        0px 0px 30px $color-vino10 inset,
+        0px 0px 40px $color-vino11 inset;
+}
+//SHADOWS SECCION CONTACTO
+@mixin shadow-contacto{
+    text-shadow:
+        0px 0px 10px $color-rojo1,
+        0px 0px 20px $color-rojo2,
+        0px 0px 30px $color-rojo3,
+        0px 0px 40px $color-rojo4;
+    box-shadow:
+        0px 0px 10px $color-rojo5,
+        0px 0px 20px $color-rojo2,
+        0px 0px 30px $color-rojo3,
+        0px 0px 40px $color-rojo4,
+        0px 0px 10px $color-rojo5 inset,
+        0px 0px 20px $color-rojo2 inset,
+        0px 0px 30px $color-rojo3 inset,
+        0px 0px 40px $color-rojo4 inset;
+}
+@mixin flex($display,$justify,$align){
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+
+//MIXIN TARJETA PRECIOS
+@each $nombre, $color in $precio-bg-card{
+    rect.#{$nombre}{
+        stroke: $color;
+        filter: drop-shadow(0 0 8px $color) drop-shadow(0 0 15px $color);
+    };
+    @if $nombre == "rojo"{
+        .precios{
+            .tarjeta-1{
+                .tarjeta-boton{
+                    &:hover{
+                        text-shadow:
+                        0 0 5px red,
+                        0 0 10px red;
+                    }
+                }
+            }
+        }
+    } @else if $nombre == "rosa"{
+        .precios{
+            .tarjeta-2{
+                .tarjeta-boton{
+                    &:hover{
+                        text-shadow: 
+                        0 0 5px #f003b5,
+                        0 0 10px #f003b5;
+                    }
+                }
+            }
+        }
+    } @else{
+        .precios{
+            .tarjeta-3{
+                .tarjeta-boton{
+                    &:hover{
+                        text-shadow: 
+                        0 0 5px blue,
+                        0 0 10px blue;
+                    }
+                }
+            }
+        }
+    }
+}
+

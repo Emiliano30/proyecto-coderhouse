@@ -1,0 +1,12 @@
+//RESETEO
+@use "./base/reset" as *;
+//HOME
+@use "./pages/home" as *;
+//PRECIOS
+@use "./pages/precios" as *;
+//HORARIOS
+@use "./pages/horarios" as *;
+//MEDIA TABLET
+@use "./layout/tablet" as *;
+//MEDIA DESKTOP
+@use "./layout/desktop" as *;
