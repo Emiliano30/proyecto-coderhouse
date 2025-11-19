@@ -38,15 +38,15 @@
 }
 //SHADOWS SECCION DISCIPLINA
 @mixin shadow-disciplina{
-    box-shadow:
-        0px 0px 10px $color-violeta-claro2,
-        0px 0px 20px $color-purple,
-        0px 0px 30px $color-indigo,
-        0px 0px 40px $color-blue,
-        0px 0px 10px $color-violeta-claro2 inset,
-        0px 0px 20px $color-purple inset,
-        0px 0px 30px $color-indigo inset,
-        0px 0px 40px $color-blue inset;
+    // box-shadow:
+    //     0px 0px 10px $color-violeta-claro2,
+    //     0px 0px 20px $color-purple,
+    //     0px 0px 30px $color-indigo,
+    //     0px 0px 40px $color-blue,
+    //     0px 0px 10px $color-violeta-claro2 inset,
+    //     0px 0px 20px $color-purple inset,
+    //     0px 0px 30px $color-indigo inset,
+    //     0px 0px 40px $color-blue inset;
 
     text-shadow:
         0px 0px 20px $color-violeta-claro2,
@@ -56,15 +56,15 @@
 }
 //SHADOWS SECCION SERVICIOS
 @mixin shadow-servicios{
-    box-shadow:
-        0px 0px 10px $color-rosa3,
-        0px 0px 20px $color-rosa4,
-        0px 0px 30px $color-rosa5,
-        0px 0px 40px $color-rosa5,
-        0px 0px 10px $color-rosa3 inset,
-        0px 0px 20px $color-rosa4 inset,
-        0px 0px 30px $color-rosa5 inset,
-        0px 0px 40px $color-rosa5 inset;
+    // box-shadow:
+    //     0px 0px 10px $color-rosa3,
+    //     0px 0px 20px $color-rosa4,
+    //     0px 0px 30px $color-rosa5,
+    //     0px 0px 40px $color-rosa5,
+    //     0px 0px 10px $color-rosa3 inset,
+    //     0px 0px 20px $color-rosa4 inset,
+    //     0px 0px 30px $color-rosa5 inset,
+    //     0px 0px 40px $color-rosa5 inset;
 
     text-shadow:
         0 0 6px $color-rosa3,
@@ -86,15 +86,15 @@
         0px 0px 20px $color-vino5,
         0px 0px 30px $color-vino6,
         0px 0px 40px $color-vino7;
-    box-shadow:
-        0px 0px 10px $color-vino4,
-        0px 0px 20px $color-vino5,
-        0px 0px 30px $color-vino6,
-        0px 0px 40px $color-vino7,
-        0px 0px 10px $color-vino8 inset,
-        0px 0px 20px $color-vino9 inset,
-        0px 0px 30px $color-vino10 inset,
-        0px 0px 40px $color-vino11 inset;
+    // box-shadow:
+    //     0px 0px 10px $color-vino4,
+    //     0px 0px 20px $color-vino5,
+    //     0px 0px 30px $color-vino6,
+    //     0px 0px 40px $color-vino7,
+    //     0px 0px 10px $color-vino8 inset,
+    //     0px 0px 20px $color-vino9 inset,
+    //     0px 0px 30px $color-vino10 inset,
+    //     0px 0px 40px $color-vino11 inset;
 }
 //SHADOWS SECCION CONTACTO
 @mixin shadow-contacto{
@@ -103,16 +103,68 @@
         0px 0px 20px $color-rojo2,
         0px 0px 30px $color-rojo3,
         0px 0px 40px $color-rojo4;
-    box-shadow:
-        0px 0px 10px $color-rojo5,
-        0px 0px 20px $color-rojo2,
-        0px 0px 30px $color-rojo3,
-        0px 0px 40px $color-rojo4,
-        0px 0px 10px $color-rojo5 inset,
-        0px 0px 20px $color-rojo2 inset,
-        0px 0px 30px $color-rojo3 inset,
-        0px 0px 40px $color-rojo4 inset;
+    // box-shadow:
+    //     0px 0px 10px $color-rojo5,
+    //     0px 0px 20px $color-rojo2,
+    //     0px 0px 30px $color-rojo3,
+    //     0px 0px 40px $color-rojo4,
+    //     0px 0px 10px $color-rojo5 inset,
+    //     0px 0px 20px $color-rojo2 inset,
+    //     0px 0px 30px $color-rojo3 inset,
+    //     0px 0px 40px $color-rojo4 inset;
 }
+
+@mixin shadow-contacto-boton{
+    .boton{
+        margin: 0 auto;
+        position: relative;
+        width: 250px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: transparent !important;
+        color: $color-tipografia;
+        font-size: 1.3rem;
+        font-weight: 500;
+        
+
+        svg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            fill: $color-rojo4;
+
+            rect{
+                width: 100%;
+                height: 100%;
+                stroke: $color-vino12;
+                stroke-width: 6px;
+                stroke-dasharray: 600;
+                stroke-dashoffset: 0;
+                border-radius: 5px;
+                filter: drop-shadow(0px 0px 5px $color-vino12);
+            }
+        }
+
+        &:hover{
+            font-weight: 600;
+            text-shadow: 
+                0 0 5px $color-rojo2,
+                0 0 10px $color-rojo2;
+            svg{
+                rect{
+                    stroke: $color-vino4;
+                    filter: drop-shadow(0px 0px 20px $color-vino12) drop-shadow(0px 0px 5px $color-rojo2);
+                }
+            }
+        }
+    }
+}
+
 @mixin flex($display,$justify,$align){
     display: $display;
     justify-content: $justify;

@@ -74,7 +74,15 @@
             transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
-        .title { grid-area: title; margin-bottom: 3rem; }
+        .title { 
+            grid-area: title; 
+            margin-bottom: 3rem;
+
+            h2{
+                font-size: 2.7rem;
+                
+            }
+         }
 
         .crossfit { grid-area: crossfit; }
         .funcional { grid-area: funcional; }
@@ -85,9 +93,34 @@
         .yoga { grid-area: yoga; }
     }
 
+    /*SECTION SERVICIOS*/
+    .servicios{
+        .title{
+            h2{
+                font-size: 2.7rem;
+                
+            }
+        }
+    }
+
+    /*SECTION PROFESORES*/
+    .profesores{
+        .title{
+            h2{
+                font-size: 2.7rem;
+                
+            }
+        }
+    }
 
     /*SECTION CONTACTO*/
     .contactos{
+        .title{
+            h2{
+                font-size: 2.7rem;
+                
+            }
+        }
         .container-fluid{
             .row{
                 .formulario{
@@ -98,10 +131,12 @@
                 }
                 .mapa{
                    
+                    
                     iframe{
                         margin: 10px auto 20px auto;
                         width: 90%;
-                        height: 275px;
+                        height: 295px;
+                        padding: 0.5rem 0;
                     }
 
                     

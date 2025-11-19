@@ -121,6 +121,28 @@
                             }
                         }
                     }
+
+                }
+                .active{
+                    svg{
+                        rect{
+                            stroke-dashoffset: 0;
+                            filter: drop-shadow(0 0 10px $color-rosa1);
+                            transition: filter 0.6s ease;
+                        }
+                    }
+
+                    &:hover{
+                        span{
+                            font-weight: bold;
+                        }
+                        svg{
+                            rect{
+                                filter: drop-shadow(0 0 5px $color-rosa3);
+                                transition: filter 0.6s ease;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -191,14 +213,18 @@
     .title {
         @include flex (flex,space-evenly,center);
         width: 100%;
-        border: 4px solid $color-violeta-claro1;
         padding: 1rem 0;
         border-radius: 1rem;
-        font-size: 2rem;
-        letter-spacing: 0.4rem;
+        height: 100%;
+        letter-spacing: 0.6rem;
         text-transform: uppercase;
         z-index: 1;
         @include shadow-disciplina;
+
+        h2{
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
     }
 
     .tarjeta {
@@ -314,15 +340,20 @@
     .title{
         @include flex (flex,space-evenly,center);
         width: 100%;
-        border: 4px solid $color-violeta-claro1;
+        
         padding: 1rem 0;
         border-radius: 1rem;
         font-size: 2rem;
-        letter-spacing: 0.4rem;
+        letter-spacing: 0.6rem;
         text-transform: uppercase;
         z-index: 1;
         margin: 0 auto;
         @include shadow-servicios;
+
+        h2{
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
     }
 
     .container-fluid{
@@ -400,15 +431,19 @@
     .title{
         @include flex (flex,space-evenly,center);
         width: 100%;
-        border: 4px solid $color-violeta-claro1;
         padding: 1rem 0;
         border-radius: 1rem;
         font-size: 2rem;
-        letter-spacing: 0.4rem;
+        letter-spacing: 0.6rem;
         text-transform: uppercase;
         z-index: 1;
         margin: 0 auto;
         @include shadow-title-profesor;
+
+        h2{
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
         
        
     }
@@ -505,17 +540,22 @@
     .title{
         @include flex (flex,space-evenly,center);
         width: 100%;
-        border: 4px solid $color-violeta-claro1;
+        
         padding: 1rem 0;
         border-radius: 1rem;
         font-size: 2rem;
-        letter-spacing: 0.4rem;
+        letter-spacing: 0.6rem;
         text-transform: uppercase;
         z-index: 1;
         margin: 0 auto;
         text-transform: uppercase;
         margin-bottom: 2rem;
         @include shadow-contacto;
+
+        h2{
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
         
 
     }
@@ -535,12 +575,11 @@
 
                     input{
                         width: 100%;
-                        height: 60px;
+                        height: 66px;
                         padding-top: 0.5rem;
                         padding-left: 1.2rem;
                         margin-bottom: 1rem;
-                        border: 3px solid rgb(208, 208, 208);
-                        border-radius: 1rem;
+                        border: 3px solid rgb(208, 208, 208);                     
                         outline: none;
                         background-color: transparent;
                         color:$color-tipografia;
@@ -556,8 +595,9 @@
                         &:hover + label,
                         &:focus + label,
                         &:not(:placeholder-shown) + label{
-                            top:0;
-                            transform:scale(0.8);
+                            top:-3px;
+                            left:-5px;
+                            transform:scale(0.5);
                             
                         }
                         
@@ -567,9 +607,10 @@
                 
 
                     label{
+                        font-size: 1.3rem;
                         position:absolute;
-                        top:30px;
-                        left:1rem;
+                        top:33px;
+                        left:0.5rem;
                         transform:translateY(-50%);
                         color:$color-tipografia;
                         transition:all 0.3s ease;
@@ -584,7 +625,6 @@
                         padding-left: 1.2rem;
                         margin-bottom: 1rem;
                         border: 3px solid rgb(208, 208, 208);
-                        border-radius: 1rem;
                         outline: none;
                         background-color: transparent;
                         color:$color-tipografia;
@@ -597,23 +637,8 @@
                             0px 0px 10px $color-rojo2 inset;
                 }
 
-                button{
-                    background-color: $color-rojo4;
-                    color: $color-tipografia;
-                    padding: 0.5rem 1rem;
-                    border-radius: 1rem;
-                    width: 50%;
-                    margin: 0 auto;
-                    border: 2px solid $color-rojo4;    
-                    transition: box-shadow 0.4s ease, border 0.4s ease;
+                @include shadow-contacto-boton;
 
-                    &:hover{
-                        border-color: $color-rojo4;
-                        box-shadow:
-                            -10px 10px 25px $color-negro2 inset,
-                            10px -10px 20px $color-rojo4 inset;
-                    }
-                }
             }
 
             .mapa{ 
@@ -632,53 +657,12 @@
                     margin: 1rem auto;
                     height: 300px;
                     width: 90%;
-                    box-shadow:
-                        -5px 5px 20px $color-negro2,
-                        3px -3px 20px $color-vino1;
+                    
                 }
                     
+                @include shadow-contacto-boton;
 
-                button{
-                    background-color: transparent;
-                    padding: 0.5rem 1rem;
-                    border-radius: 1rem;
-                    width: 50%;
-                    border: 2px solid $color-rojo4;
-                    transition: box-shadow 0.4s ease, border 0.4s ease;
-                    position:relative;
-                    overflow: hidden;
-                    margin: 0 auto;
-
-                    &:hover{
-                        border-color: $color-rojo4;
-                        box-shadow:
-                            -10px 10px 25px $color-negro2 inset,
-                            10px -10px 20px $color-rojo4 inset;
-
-                        &::after{
-                            left: 0;
-                            transition: all 0.6s ease;
-                        }
-                    }
-
-                    a{
-                        color: $color-tipografia;
-                        text-decoration: none;
-                        font-size: 1.2rem;
-                    }
-
-                    &::after{
-                        position:absolute;
-                        content:"";
-                        width: 400px;
-                        border-bottom: 45px solid $color-rojo4;
-                        border-right: 50px solid transparent;
-                        top: 0;
-                        left: -395px;
-                        z-index: -1;
-                        transition: all 0.6s ease;
-                    }
-                }
+            
             }
             
         }
