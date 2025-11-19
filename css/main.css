@@ -369,7 +369,7 @@ rect.azul {
 }
 .disciplinas .title h2 {
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: 600;
 }
 .disciplinas .tarjeta {
   position: relative;
@@ -710,6 +710,10 @@ rect.azul {
   font-size: 1.3rem;
   font-weight: 500;
 }
+.contactos .container-fluid .row .formulario .boton span a {
+  text-decoration: none;
+  color: #fff;
+}
 .contactos .container-fluid .row .formulario .boton svg {
   position: absolute;
   top: 0;
@@ -762,6 +766,10 @@ rect.azul {
   color: #fff;
   font-size: 1.3rem;
   font-weight: 500;
+}
+.contactos .container-fluid .row .mapa .boton span a {
+  text-decoration: none;
+  color: #fff;
 }
 .contactos .container-fluid .row .mapa .boton svg {
   position: absolute;

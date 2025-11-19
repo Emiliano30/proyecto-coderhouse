@@ -223,7 +223,7 @@
 
         h2{
             font-size: 2.5rem;
-            font-weight: bold;
+            font-weight: 600;
         }
     }
 
@@ -661,6 +661,8 @@
                 }
                     
                 @include shadow-contacto-boton;
+
+            
 
             
             }
