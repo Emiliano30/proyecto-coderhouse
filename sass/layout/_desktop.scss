@@ -38,6 +38,22 @@
                 font-size: 3.5rem;
             }
         }
+
+        .presentacion{
+            background-color: $color-negro1;
+            width: 86%;
+            padding:0 2rem;
+            padding-top: 3rem;
+
+            h3{
+                font-size: 2rem;
+            }
+
+            
+            .presentacion-texto{
+                font-size: 1.5rem;
+            }
+        }
     }
 
     /*SECTION SERVICIOS*/
@@ -61,7 +77,25 @@
             }
         }
 
+        .presentacion{
+            width: 45% !important;
+            padding: 2rem;
+
+            h3{
+                font-size: 2rem;
+            }
+
+            .presentacion-texto{
+                font-size: 1.5rem;
+            }
+            
+            
+            
+            
+        }
+        
         .carousel{
+            width: 50% !important;
             .carousel-item{
                 .contenedor{
                     justify-content: space-evenly;
@@ -71,7 +105,8 @@
                     }
         
                     .card{
-                        width: 350px;
+                        width: 300px;
+                        margin: 0 1rem;
                     }
                 }
             }
@@ -80,59 +115,78 @@
 
     }
 
-    /*SECTION CONTACTANOS*/
-    .contactos{
-        padding-top:3rem;
-        .title{
-            width: 30%;
+     .contactos{
+        display:flex;
+        flex-direction:row;
+        
+        
+        .cont{
+            padding:1rem;
+            .formulario{
+                width: 70%;
+                margin:0 auto;
+            }
+        }
+        
+        .contacto-img{
+            width: 100%;
+            display:inline-block;
+            
+            
+            img{
+                @include imagen;
+            
+                
+            }
+        }
+
+    }
+
+    footer{
+        .redes{
             h2{
-                font-size: 3.5rem;
+                font-size: 3rem;
+            }
+            div{
+                justify-content: space-evenly;
+                a{
+                    font-size: 2rem;
+                }
             }
         }
 
-        .container-fluid{
-            margin: 100px 0;
+        .contacto{
+            display: flex;
+            flex-direction: column;
+            gap:1.5rem;
+            .contacto-datos{
 
-            .row{
-                justify-content: space-evenly;
-
-                
-                .formulario{
-                    height: 100%;
-                    width: 30%;
-                    textarea{
-                        height: 290px;
-                    }
-                    
+                @include flex(flex,left,center);
+                gap:2rem;
+                i{
+                    font-size: 2rem;
+                    padding-bottom:1rem;
                 }
+               
+            }
+        }
 
-                .mapa{
-                    width: 30%;
-                    height: 100%;
-
-                    .direccion{
-                        padding:0;
-                        margin-bottom: 2.2rem;
-                    }
-                    iframe{
-                        width: 100%;
-                        height: 305px;
-                        padding: 0.5rem 0;
-                       
-                    }
-                }
-                
+        .navegacion{
+            .menu-lista{
+                padding-top:1rem;
             }
         }
     }
-
-    //PAGE PRECIOS
+    /*PAGE PRECIOS*/
     .precios{
+        
         grid-template-columns: repeat(3,1fr);
-        grid-template-rows: auto 1fr;
+        grid-template-rows: 20% 2fr 1fr;
         grid-template-areas: 
         "titulo titulo titulo"
-        "tarjeta-1 tarjeta-2 tarjeta-3";
+        "tarjeta1 tarjeta2 tarjeta3"
+        ;
+        
         
 
         .titulo{
@@ -142,30 +196,51 @@
             
             
         }
-        .tarjeta-1{grid-area: tarjeta-1;}
-        .tarjeta-2{grid-area: tarjeta-2;}
-        .tarjeta-3{grid-area: tarjeta-3;}
+        .tarjeta-1{grid-area: tarjeta1;}
+        .tarjeta-2{grid-area: tarjeta2;}
+        .tarjeta-3{grid-area: tarjeta3;}
         
     }
  
     //PAGE HORARIOS//
     .page-horarios{
-        .horarios{       
-            .accordion-body{
-                .accordion{
-                    display: flex;
-                    flex-direction: row;
-                    .accordion-item{
-                        height: 300px;
-                                    
-                        .accordion-button{
-                            width: 200px;
+        .horarios{
+            .btns{
+                .title{
+                    margin-bottom:1rem;
+                }
+            }
+        }
+        .contenedor{
+            grid-template-columns: repeat(7,1fr);
+
+            .columna-dia{
+
+                h3{
+                    font-size:1.3rem;
+                }
+                .class-card{
+                        flex-direction:column;
+                        align-items:flex-start;
+                        justify-content:space-evenly;
+                        padding:1rem;
+                        height:190px;
+                        gap:0.3rem;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.792);
+
+
+                        .class-time,.class-name,.class-details{
+                            width:auto;
                         }
 
+                        .class-details{
+                            font-size:1.1rem;
+                            .book-btn{
+                                padding:0.2rem;
+                            }
+                        }
                     }
-                }
-            }   
-            
+            }
         }
     }
 }

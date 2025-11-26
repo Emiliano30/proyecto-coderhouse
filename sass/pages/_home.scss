@@ -1,7 +1,8 @@
 //MIXIN
+@use "../utilities/variables" as *;
+@use "../utilities/hamburger" as *;
 @use "../utilities/mixin" as *;
 //VARIABLES
-@use "../utilities/variables" as *;
 //ANIMACIONES
 @use "../utilities/animaciones" as *;
 
@@ -16,28 +17,49 @@
         .container-fluid{
             .logo{
                 font-size: 1.8rem;
-                font-weight: bold;
                 color: $color-tipografia !important;
                 text-decoration: none;
                 @include text-shadow-logo;
                 animation: text-flicker-in-glow 2s ease-in-out forwards;
+
+                h1{
+                    font-weight: bold;
+                }
             }
             .custom-toggler{
-                border: 2px solid $color-violeta2 !important;
+                
                 color: $color-violeta2 !important;
                 background: none !important;
                 border-radius: 5px;
                 width: 3rem;
                 height: 3rem;
                 padding: 0;
+                padding-top:3px;
 
                 &:focus{
-                    box-shadow: 0 0 10px $color-violeta2 !important;
+                    
+                    box-shadow: none;
+                    
                 }
 
-                .icono-menu{
-                    font-size: 2rem;
-                    color: $color-violeta2;
+            }
+
+
+            .hamburger{
+                padding-top: 5px;
+                padding-left: 10px;
+                &.is-active{
+                     box-shadow: 0 0 10px $color-violeta2 !important;
+                }
+                .hamburger-inner,
+                .hamburger-inner::before,
+                .hamburger-inner::after {
+                    
+                    width: 1.8rem;
+                    background-color: $hamburger-layer-color; 
+                    box-shadow: 0 0 5px $hamburger-layer-color;
+                    transition: box-shadow 0.3s ease;
+                    
                 }
             }
 
@@ -81,6 +103,7 @@
             }
 
             .botones{
+
                 .boton{
                     position: relative;
                     width: 150px;
@@ -183,6 +206,15 @@
 
         color: $color-tipografia;
         background-color: $color-negro1;
+
+        h2{
+            font-size: 2rem;
+            @include shadow-text-main;
+            
+        }
+        p{
+            font-size: 1.2rem;
+        }
     }
 
 }
@@ -192,11 +224,11 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto repeat(7, 1fr);
+    grid-template-rows: repeat(8, auto);
     justify-items: center;
     row-gap: 50px;
     padding-bottom: 50px;
-    margin-top: 50px;
+    padding-top: 50px;
 
     img{
         @include imagen
@@ -226,6 +258,62 @@
             font-weight: 600;
         }
     }
+
+    @include textos;
+    h3{
+        @include shadow-disciplina;
+    }
+    span{
+        text-shadow: 
+        0px 0px 3px $color-violeta2,
+        0px 0px 5px $color-violeta2,
+        0px 0px 10px $color-violeta2;
+        font-weight: bold;
+    }
+
+    // .presentacion{
+    //     display: flex;
+    //     flex-direction: column;
+    //     gap:2rem;
+    //     width: 94%;
+    //     margin: 0 auto;
+    //     height: 100%;
+    //     border-radius: 1rem;
+    //     line-height: 1.8;
+    //     background-color: $color-negro1;
+    //     padding: 1rem;
+        
+        
+        
+        
+    //     h3{
+    //         @include shadow-disciplina;
+    //         text-align: center;
+    //         font-size: 1.7rem;
+    //         font-weight: 600;
+    //     }
+
+    //     .presentacion-texto{
+    //         height: 100%;
+    //         font-size: 1.1rem;
+    //         text-align: justify;
+    //         font-weight: 500;
+    //         color: $color-tipografia;
+
+    //         span{
+    //             text-shadow: 
+    //             0px 0px 3px $color-violeta2,
+    //             0px 0px 5px $color-violeta2,
+    //             0px 0px 10px $color-violeta2;
+    //             font-weight: bold;
+                
+                
+                
+    //         }
+            
+           
+    //     }
+    // }
 
     .tarjeta {
         position: relative;
@@ -260,7 +348,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            font-size: 1.5rem;
+            font-size: 1rem;
             color: white;
             background: $color-negro4;
             transition: height 0.5s ease;
@@ -271,63 +359,71 @@
         &:hover{
             &::after{
                 content: attr(data-descripcion);
+                text-transform:lowercase;
+                
             }
         }
-        &::after { content: attr(data-nombre); }
+        &::after { content: attr(data-nombre); text-transform:uppercase; }
 
     }
-    .funcional{
-        &:hover{
-            &::after{
-                content: attr(data-descripcion);
-            }
-        }
-        &::after { content: attr(data-nombre); }
+    // .funcional{
+    //     &:hover{
+    //         &::after{
+    //             content: attr(data-descripcion);
+    //             text-transform:lowercase;
+    //         }
+    //     }
+    //     &::after { content: attr(data-nombre); text-transform:uppercase;}
 
-    } 
+    // } 
     .levantamiento{
         &:hover{
             &::after{
                 content: attr(data-descripcion);
+                text-transform:lowercase;
             }
         }
-        &::after { content: attr(data-nombre); }
+        &::after { content: attr(data-nombre); text-transform:uppercase;}
 
     } 
     .boxeo{
         &:hover{
             &::after{
                 content: attr(data-descripcion);
+                text-transform:lowercase;
             }
         }
-        &::after { content: attr(data-nombre); }
+        &::after { content: attr(data-nombre); text-transform:uppercase;}
 
     }
     .natacion{
         &:hover{
             &::after{
                 content: attr(data-descripcion);
+                text-transform:lowercase;
             }
         }
-        &::after { content: attr(data-nombre); }
+        &::after { content: attr(data-nombre); text-transform:uppercase;}
 
     } 
     .spinning{
         &:hover{
             &::after{
                 content: attr(data-descripcion);
+                text-transform:lowercase;
             }
         }
-        &::after { content: attr(data-nombre); }
+        &::after { content: attr(data-nombre); text-transform:uppercase;}
 
     } 
     .yoga{
         &:hover{
             &::after{
-                content: attr(data-descripcion);
+                content: attr(data-descripcion); 
+                text-transform:lowercase;
             }
         }
-        &::after { content: attr(data-nombre); }
+        &::after { content: attr(data-nombre); text-transform:uppercase;}
 
     }
 }
@@ -376,12 +472,12 @@
                     10px -10px 20px $color-rosa7;
                 transition: box-shadow 0.4s ease, border 0.4s ease;
 
-                &:hover{
-                    border-color: $color-rosa7;
-                    box-shadow:
-                        -10px 10px 25px $color-negro2 inset,
-                        10px -10px 20px $color-rosa7 inset;
-                }
+                // &:hover{
+                //     border-color: $color-rosa7;
+                //     box-shadow:
+                //         -10px 10px 25px $color-negro2 inset,
+                //         10px -10px 20px $color-rosa7 inset;
+                // }
 
                 .card-body{
                     color: $card-body;
@@ -419,6 +515,7 @@
 .profesores{
     padding-top: 50px;
     position:relative;
+    
 
     &::before{
         @include imagen-bg ("../img/gemini-2.5-flash-image-preview\ \(nano-banana\)_generame_otra_imagen\ \(1\).png");
@@ -448,12 +545,25 @@
        
     }
 
+    @include textos;
+    h3{
+        @include shadow-title-profesor;
+    }
+    span{
+        text-shadow: 
+        0px 0px 3px $color-vino4,
+        0px 0px 5px $color-vino4,
+        0px 0px 10px $color-vino4;
+        font-weight: bold;
+    }
+    
+    
     .carousel{
         margin: 1rem 0;
         padding: 2rem 0;
 
         .carousel-item{
-            padding-top: 2rem;
+            padding-top: 9rem;
             height: 550px;
 
             .card{
@@ -461,68 +571,45 @@
                 color: $color-tipografia;
                 background: transparent;
                 width: 300px;
-                height: 500px;
-                border-radius: 1rem;
+                height: 350px;
                 position: relative;
                 border: none;
 
                 .card-body{
-                    @include flex(flex,center,center);
+                    @include flex(flex,end,center);
                     flex-direction: column;
                     text-align: center;
                     position: relative;
-                    
-
-                    h3{
-                        background-color: #7a072d;
-                        border-radius: 30px;
-                        color:$color-tipografia;
-                        position: absolute;
-                        top: 20px;
-                        right: 35px;
-                        padding: 1rem;
-                        font-size: 1.3rem;
-                        z-index: 2;
-                        box-shadow:
-                            -5px 5px 20px $color-negro2,
-                            3px -3px 20px $color-vino1;
-
-                        &::before{
-                            content: "";
-                            position: absolute;
-                            border-top: 20px solid #7a072d;
-                            border-left: 20px solid transparent;
-                            border-right: 20px solid transparent;
-                            bottom: -19px;
-                            left: 30px;
-                        }
-
-                    }
-
-                
-                    p{
-                        display: inline-block;
-                        width: 80%;
-                        padding: 1rem 0;
-                        border-radius: 10px;
-                        background: black;
-                        color: white;
-                        position: absolute;
-                        bottom: 20px;
-                        box-shadow:
-                            -5px 5px 20px $color-negro2,
-                            3px -3px 20px $color-vino1;
-                    }
+                    border-radius: 1rem;
+                    background-color: #2D0625;
+                    box-shadow:
+                        0px 0px 10px $color-vino4,
+                        0px 0px 20px $color-vino5,;
+        
 
                     .imagen-profesor{
-                        width: 250px;
-                        height: 250px;
+                        position:absolute;
+                        padding: 0.5rem;
+                        top:0;
+                        left:50%;
+                        transform: translate(-50%, -50%);
+                        width: 220px;
+                        height: 220px;
                         border-radius: 100%;
+                        border: 4px solid $color-tipografia;
+                        @include shadow-imagen;
                         img{
                             @include imagen;
                             border-radius: 100%;
                         }
                     }
+
+                    .nombre{
+                        padding-bottom:3rem;
+                        position:relative;
+
+                    }
+                    
                 }
             }
 
@@ -535,155 +622,215 @@
 
 /*SECTION CONTACTANOS*/
 .contactos{
-    margin-bottom: 2rem;
+    padding:0 !important;
+    
+    position:relative;
 
-    .title{
-        @include flex (flex,space-evenly,center);
-        width: 100%;
+
+    .contacto-img{
+        display:none;
         
-        padding: 1rem 0;
-        border-radius: 1rem;
-        font-size: 2rem;
-        letter-spacing: 0.6rem;
-        text-transform: uppercase;
-        z-index: 1;
-        margin: 0 auto;
-        text-transform: uppercase;
-        margin-bottom: 2rem;
-        @include shadow-contacto;
-
-        h2{
-            font-size: 2.5rem;
-            font-weight: bold;
-        }
-        
-
     }
 
-    .container-fluid{
-        .row{
-            .formulario{
-                margin-bottom: 2rem;
-
-                h3{
-                    text-align: center;
-                }
-
-                .campo{
-                    position:relative;
-                    
-
-                    input{
-                        width: 100%;
-                        height: 66px;
-                        padding-top: 0.5rem;
-                        padding-left: 1.2rem;
-                        margin-bottom: 1rem;
-                        border: 3px solid rgb(208, 208, 208);                     
-                        outline: none;
-                        background-color: transparent;
-                        color:$color-tipografia;
-                        font-size: 1.3rem;
-                        box-shadow:
-                            0px 0px 10px $color-rojo5,
-                            0px 0px 20px $color-rojo2,
-                            
-                            0px 0px 5px $color-rojo5 inset,
-                            0px 0px 10px $color-rojo2 inset;
-                           
-
-                        &:hover + label,
-                        &:focus + label,
-                        &:not(:placeholder-shown) + label{
-                            top:-3px;
-                            left:-5px;
-                            transform:scale(0.5);
-                            
-                        }
-                        
+    .cont{
+        width: 100%;
+        
+        .title{
+            @include flex (flex,space-evenly,center);
+            width: 100%;
+            
+            padding: 1rem 0;
+            border-radius: 1rem;
+            font-size: 2rem;
+            letter-spacing: 0.6rem;
+            text-transform: uppercase;
+            z-index: 1;
+            margin: 0 auto;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            @include shadow-contacto;
     
+            h2{
+                font-size: 2.5rem;
+                font-weight: bold;
+            }
+            
+    
+        }
+    
+        .container-fluid{
+            .row{
+                .formulario{
+                    margin-bottom: 2rem;
+    
+                    
+    
+                    input{
+                            width: 100%;
+                            height:50px;
+                            border: 3px solid rgb(208, 208, 208);                     
+                            outline: none;
+                            border-radius:0px 20px 0 20px;
+                            background-color: transparent;
+                            color:$color-tipografia;
+                            font-size: 1.3rem;
+                            box-shadow:
+                                0px 0px 10px $color-rojo5,
+                                0px 0px 20px $color-rojo2,
+                                
+                                0px 0px 5px $color-rojo5 inset,
+                                0px 0px 10px $color-rojo2 inset;
                     }
-
-                
-
+                   
                     label{
-                        font-size: 1.3rem;
-                        position:absolute;
-                        top:33px;
-                        left:0.5rem;
-                        transform:translateY(-50%);
-                        color:$color-tipografia;
-                        transition:all 0.3s ease;
+                        display: inline-block;
+                        background-color: rgba(133, 100, 100, 0.525);
+                        width: 130px;
+                        padding:10px;
+                        clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
+                        
+                        border-radius: 10px 10px 0 0;
                     }
-
-                }
-
-                textarea{
-                    width: 100%;
+    
+                    textarea{
+                        width: 100%;
                         height: 150px;
                         padding-top: 0.5rem;
                         padding-left: 1.2rem;
                         margin-bottom: 1rem;
                         border: 3px solid rgb(208, 208, 208);
                         outline: none;
+                        border-radius:0px 20px 0 20px;
                         background-color: transparent;
                         color:$color-tipografia;
                         font-size: 1.3rem;
                         box-shadow:
                             0px 0px 10px $color-rojo5,
                             0px 0px 20px $color-rojo2,
-                            
                             0px 0px 5px $color-rojo5 inset,
                             0px 0px 10px $color-rojo2 inset;
+                    }
+    
+                    @include shadow-contacto-boton;
+    
                 }
-
-                @include shadow-contacto-boton;
-
-            }
-
-            .mapa{ 
+    
                 
-                h2{
-                    margin-bottom: 2rem;
-                }
-
-                .direccion{
-                    text-align: left;
-                    padding-left: 1rem;
-                    font-size: 1.2rem;
-                }
-
-                iframe{ 
-                    margin: 1rem auto;
-                    height: 300px;
-                    width: 90%;
                     
-                }
-                    
-                @include shadow-contacto-boton;
-
-            
-
-            
+                  
+    
+                
+    
+                
+                
+                
             }
             
         }
-        
     }
-}
 
+}
 
 
 /*FOOTER*/
 footer{
     background-color: $footer-bg;
-    height: 80px;
-    @include flex (flex, space-around, center);
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+    "redes redes"
+    "navegacion contacto"
+    "mapa mapa"
+    "derechos derechos";
+    justify-items: center;
     margin-top: auto;
+    gap:2rem;
+    padding:0 1rem;
 
-    p{
+    .redes{
+        
+        padding-top:2rem;
+        grid-area:redes;
+        h2{
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: $color-tipografia !important;
+            text-decoration: none;
+            @include text-shadow-logo;
+            animation: text-flicker-in-glow 2s ease-in-out forwards;
+        }
+        div{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            gap:1rem;
+            a{
+                color:$color-violeta1;
+                font-size: 1.5rem;
+
+                &:hover{
+                    color:$color-tipografia;
+                    @include shadow-link-boton;
+                }
+            }
+        }
+    }
+    .contacto{
+        grid-area:contacto;
+        i{
+            color:$color-violeta1;
+            font-size: 1.2rem;
+        }
+        
+    }
+    .navegacion{
+        grid-area:navegacion;
+        .menu-lista{
+            background-color: transparent !important;
+
+            .nav-item{
+                .nav-link{
+                    color: $color-tipografia !important;
+                    position: relative;
+                    display: inline-block;
+                    font-size: 1rem;
+                    margin: 0 0.5rem;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: -3px;
+                        width: 0%;
+                        height: 2px;
+                        background: linear-gradient(90deg, $color-violeta3, $color-rosa2);
+                        box-shadow: 0 0 10px $color-rosa1;
+                        transition: width 0.4s ease;
+                    }
+
+                    &:hover{
+                        @include shadow-link-boton;
+
+                        &::after{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mapa{
+        grid-area:mapa;
+    }
+    .derechos{
+        grid-area:derechos;
         padding-top: 10px;
         display: block;
+        text-align:center;
     }
 }
 

@@ -9,6 +9,7 @@
     
 
     .precios{
+        
         display: grid;
         gap: 1rem;
         place-items: center;
@@ -55,6 +56,30 @@
 
                 ul{
                     text-align: left;
+                    list-style-type: none;
+                    li{
+                        display:flex;
+                        align-items:center;
+                        gap:1rem;
+                        margin-bottom:0.5rem;
+                        .bi-check-circle{
+                            color: green;
+                            text-shadow:0 0 5px green;
+                            font-weight:bold;
+                            font-size:1.2rem;
+                            
+                        }
+                        &.disable{
+                            opacity: 0.5;
+                        }
+                        .bi-x-circle{
+                            color: red;
+                            text-shadow:0 0 5px red;
+                            font-weight:bold;
+                            font-size:1.2rem;
+                            
+                        }
+                    }
                 }
 
                 .tarjeta-boton{

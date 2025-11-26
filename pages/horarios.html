@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css">
 
     <title>Horarios</title>
 </head>
@@ -21,10 +22,12 @@
             <div class="container-fluid">
                 <a class="navbar-brand logo" href="../index.html"><h1>FITPOWER</h1></a>
 
-                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <i class="bi bi-list icono-menu"></i>
+                <button class="hamburger hamburger--collapse navbar-toggler custom-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
                 </button>
 
                 <div class="collapse navbar-collapse colapsable" id="navbarNav">
@@ -40,7 +43,7 @@
                                 href="../pages/ubicacion.html">UBICACIONES</a></li>
                     </ul>
 
-                    <div class="botones d-flex flex-column flex-lg-row align-items-center gap-2 mt-3 mt-lg-0 ms-lg-3">
+                    <div class="botones d-flex flex-column flex-lg-row gap-2 mt-3 mt-lg-0 ms-lg-3">
                         <div class="boton active">
                             <span>SUSCRIBIRSE</span>
                             <svg>
@@ -59,991 +62,408 @@
         </nav>
     </header>
 
+
     <main class="horarios">
-        <h2 class="title">Horarios</h2>
-            <div class="accordion accordion-flush" id="accordionFlushExample">
-
-                <!-- Colapsar aqui -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed boton-azul" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Crossfit
-                        </button>
-                    </h2>
-                    <div id="flush-collapseOne" class="accordion-collapse collapse"
-                        data-bs-parent="#accordionFlushExample">
-
-                        <!-- Colapsar body -->
-                        <div class="accordion-body">
-                            <div class=" acordion accordion accordion-flush" id="Crossfit">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed boton-azul" type="button" data-bs-toggle="collapse" data-bs-target="#Lunes" aria-expanded="false" aria-controls="Lunes">
-                                            Lunes
-                                        </button>
-                                    </h2>
-                                    <div id="Lunes" class="accordion-collapse collapse" data-bs-parent="#Crossfit">
-                                        <div class="accordion-body">
-
-                                            <!-- colapsar tabla -->
-                                            <table class="table table-dark table-hover">
-                                                <thead class="text-center">
-                                                    <tr>
-                                                        <th>Horario</th>
-                                                        <th>Disponible</th>
-                                                        <th>Reservar</th>
-                                                    </tr>
-                                                    
-                                                </thead>
-                                                <tbody class="text-center">
-                                                    <tr>
-                                                        <td>6:00 AM - 7:00 AM</td>
-                                                        <td>8</td>
-                                                        <td><button class="btn btn-primary azul">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7:00 AM - 8:00 AM</td>
-                                                        <td>5</td>
-                                                        <td><button class="btn btn-primary azul">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8:00 AM - 9:00 AM</td>
-                                                        <td>3</td>
-                                                        <td><button class="btn btn-primary azul">Reservar</button></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed boton-azul" type="button" data-bs-toggle="collapse" data-bs-target="#Martes" aria-expanded="false" aria-controls="Martes">
-                                            Martes
-                                        </button>
-                                    </h2>
-                                    <div id="Martes" class="accordion-collapse collapse" data-bs-parent="#Crossfit">
-                                        <div class="accordion-body">
-                                            <!-- colapsat tabla -->
-                                            <table class="table table-dark table-hover">
-                                                <thead class="text-center">
-                                                    <tr>
-                                                        <th>Horario</th>
-                                                        <th>Disponible</th>
-                                                        <th>Reservar</th>
-                                                    </tr>
-                                                    
-                                                </thead>
-                                                <tbody class="text-center">
-                                                    <tr>
-                                                        <td>6:00 AM - 7:00 AM</td>
-                                                        <td>8</td>
-                                                        <td><button class="btn btn-primary azul">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7:00 AM - 8:00 AM</td>
-                                                        <td>5</td>
-                                                        <td><button class="btn btn-primary azul">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8:00 AM - 9:00 AM</td>
-                                                        <td>3</td>
-                                                        <td><button class="btn btn-primary azul">Reservar</button></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed boton-azul" type="button" data-bs-toggle="collapse" data-bs-target="#Miercoles" aria-expanded="false" aria-controls="Miercoles">
-                                            Miercoles
-                                        </button>
-                                    </h2>
-                                    <div id="Miercoles" class="accordion-collapse collapse" data-bs-parent="#Crossfit">
-                                        <div class="accordion-body">
-                                            <!-- colapsar tabla -->
-                                            <table class="table table-dark table-hover">
-                                                <thead class="text-center">
-                                                    <tr>
-                                                        <th>Horario</th>
-                                                        <th>Disponible</th>
-                                                        <th>Reservar</th>
-                                                    </tr>
-                                                    
-                                                </thead>
-                                                <tbody class="text-center">
-                                                    <tr>
-                                                        <td>6:00 AM - 7:00 AM</td>
-                                                        <td>8</td>
-                                                        <td><button class="btn btn-primary azul">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7:00 AM - 8:00 AM</td>
-                                                        <td>5</td>
-                                                        <td><button class="btn btn-primary azul">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8:00 AM - 9:00 AM</td>
-                                                        <td>3</td>
-                                                        <td><button class="btn btn-primary azul">Reservar</button></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-
-                        </div>
-                    </div>
+        <div class="btns">
+            <h2 class="title">Horarios de clases</h2>
+            <div class="filtro">
+                <div>
+                    <span class="negro"></span>
+                    <p>Todo</p>
                 </div>
-                <!-- Colapsar aqui -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed boton-violeta" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Funcional
-                        </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                        data-bs-parent="#accordionFlushExample">
-                        <!-- colapsar body -->
-                        <div class="accordion-body">
-                            <div class="accordion accordion-flush" id="Funcional">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed boton-violeta" type="button" data-bs-toggle="collapse" data-bs-target="#LunesF" aria-expanded="false" aria-controls="LunesF">
-                                            Lunes
-                                        </button>
-                                    </h2>
-                                    <div id="LunesF" class="accordion-collapse collapse" data-bs-parent="#Funcional">
-                                        <div class="accordion-body">
-                                            <!-- colapsar tabla -->
-                                            <table class="table table-dark table-hover">
-                                                <thead class="text-center">
-                                                    <tr>
-                                                        <th>Horario</th>
-                                                        <th>Disponible</th>
-                                                        <th>Reservar</th>
-                                                    </tr>
-                                                    
-                                                </thead>
-                                                <tbody class="text-center">
-                                                    <tr>
-                                                        <td>6:00 AM - 7:00 AM</td>
-                                                        <td>8</td>
-                                                        <td><button class="btn btn-primary violeta">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7:00 AM - 8:00 AM</td>
-                                                        <td>5</td>
-                                                        <td><button class="btn btn-primary violeta">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8:00 AM - 9:00 AM</td>
-                                                        <td>3</td>
-                                                        <td><button class="btn btn-primary violeta">Reservar</button></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed boton-violeta" type="button" data-bs-toggle="collapse" data-bs-target="#MartesF" aria-expanded="false" aria-controls="MartesF">
-                                            Martes
-                                        </button>
-                                    </h2>
-                                    <div id="MartesF" class="accordion-collapse collapse" data-bs-parent="#Funcional">
-                                        <div class="accordion-body">
-                                            <!-- colapsar tabla -->
-                                            <table class="table table-dark table-hover">
-                                                <thead class="text-center">
-                                                    <tr>
-                                                        <th>Horario</th>
-                                                        <th>Disponible</th>
-                                                        <th>Reservar</th>
-                                                    </tr>
-                                                    
-                                                </thead>
-                                                <tbody class="text-center">
-                                                    <tr>
-                                                        <td>6:00 AM - 7:00 AM</td>
-                                                        <td>8</td>
-                                                        <td><button class="btn btn-primary violeta">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7:00 AM - 8:00 AM</td>
-                                                        <td>5</td>
-                                                        <td><button class="btn btn-primary violeta">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8:00 AM - 9:00 AM</td>
-                                                        <td>3</td>
-                                                        <td><button class="btn btn-primary violeta">Reservar</button></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed boton-violeta" type="button" data-bs-toggle="collapse" data-bs-target="#MiercolesF" aria-expanded="false" aria-controls="MiercolesF">
-                                            Miercoles
-                                        </button>
-                                    </h2>
-                                    <div id="MiercolesF" class="accordion-collapse collapse" data-bs-parent="#Funcional">
-                                        <div class="accordion-body">
-                                            <!-- colapsar tabla -->
-                                            <table class="table table-dark table-hover">
-                                                <thead class="text-center">
-                                                    <tr>
-                                                        <th>Horario</th>
-                                                        <th>Disponible</th>
-                                                        <th>Reservar</th>
-                                                    </tr>
-                                                    
-                                                </thead>
-                                                <tbody class="text-center">
-                                                    <tr>
-                                                        <td>6:00 AM - 7:00 AM</td>
-                                                        <td>8</td>
-                                                        <td><button class="btn btn-primary violeta">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7:00 AM - 8:00 AM</td>
-                                                        <td>5</td>
-                                                        <td><button class="btn btn-primary violeta">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8:00 AM - 9:00 AM</td>
-                                                        <td>3</td>
-                                                        <td><button class="btn btn-primary violeta">Reservar</button></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
+                <div>
+                    <span class="crossfit"></span>
+                    <p>Crossfit</p>
                 </div>
-                <!-- Colapsar aqui -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed boton-rosa" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseThree" aria-expanded="false"
-                            aria-controls="flush-collapseThree">
-                            Levantamiento
-                        </button>
-                    </h2>
-                    <div id="flush-collapseThree" class="accordion-collapse collapse"
-                        data-bs-parent="#accordionFlushExample">
-                        <!-- colapsar body -->
-                        <div class="accordion-body">
-                            <div class="accordion accordion-flush" id="Levantamiento">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed boton-rosa" type="button" data-bs-toggle="collapse" data-bs-target="#LunesL" aria-expanded="false" aria-controls="LunesL">
-                                            Lunes
-                                        </button>
-                                    </h2>
-                                    <div id="LunesL" class="accordion-collapse collapse" data-bs-parent="#Levantamiento">
-                                        <div class="accordion-body">
-                                            <!-- colapsar tabla -->
-                                            <table class="table table-dark table-hover">
-                                                <thead class="text-center">
-                                                    <tr>
-                                                        <th>Horario</th>
-                                                        <th>Disponible</th>
-                                                        <th>Reservar</th>
-                                                    </tr>
-                                                    
-                                                </thead>
-                                                <tbody class="text-center">
-                                                    <tr>
-                                                        <td>6:00 AM - 7:00 AM</td>
-                                                        <td>8</td>
-                                                        <td><button class="btn btn-primary rosa">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7:00 AM - 8:00 AM</td>
-                                                        <td>5</td>
-                                                        <td><button class="btn btn-primary rosa">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8:00 AM - 9:00 AM</td>
-                                                        <td>3</td>
-                                                        <td><button class="btn btn-primary rosa">Reservar</button></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed boton-rosa" type="button" data-bs-toggle="collapse" data-bs-target="#MartesL" aria-expanded="false" aria-controls="MartesL">
-                                            Martes
-                                        </button>
-                                    </h2>
-                                    <div id="MartesL" class="accordion-collapse collapse" data-bs-parent="#Levantamiento">
-                                        <div class="accordion-body">
-                                            <!-- colapsar tabla -->
-                                            <table class="table table-dark table-hover">
-                                                <thead class="text-center">
-                                                    <tr>
-                                                        <th>Horario</th>
-                                                        <th>Disponible</th>
-                                                        <th>Reservar</th>
-                                                    </tr>
-                                                    
-                                                </thead>
-                                                <tbody class="text-center">
-                                                    <tr>
-                                                        <td>6:00 AM - 7:00 AM</td>
-                                                        <td>8</td>
-                                                        <td><button class="btn btn-primary rosa">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7:00 AM - 8:00 AM</td>
-                                                        <td>5</td>
-                                                        <td><button class="btn btn-primary rosa">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8:00 AM - 9:00 AM</td>
-                                                        <td>3</td>
-                                                        <td><button class="btn btn-primary rosa">Reservar</button></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed boton-rosa" type="button" data-bs-toggle="collapse" data-bs-target="#MiercolesL" aria-expanded="false" aria-controls="MiercolesL">
-                                            Miercoles
-                                        </button>
-                                    </h2>
-                                    <div id="MiercolesL" class="accordion-collapse collapse" data-bs-parent="#Levantamiento">
-                                        <div class="accordion-body">
-                                            <!-- colapsar tabla -->
-                                            <table class="table table-dark table-hover">
-                                                <thead class="text-center">
-                                                    <tr>
-                                                        <th>Horario</th>
-                                                        <th>Disponible</th>
-                                                        <th>Reservar</th>
-                                                    </tr>
-                                                    
-                                                </thead>
-                                                <tbody class="text-center">
-                                                    <tr>
-                                                        <td>6:00 AM - 7:00 AM</td>
-                                                        <td>8</td>
-                                                        <td><button class="btn btn-primary rosa">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7:00 AM - 8:00 AM</td>
-                                                        <td>5</td>
-                                                        <td><button class="btn btn-primary rosa">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8:00 AM - 9:00 AM</td>
-                                                        <td>3</td>
-                                                        <td><button class="btn btn-primary rosa">Reservar</button></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
+                <div >
+                    <span class="levantamiento"></span>
+                    <p>Levantamiento</p>
                 </div>
-                <!-- Colapsar aqui -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed boton-celeste" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseFour" aria-expanded="false"
-                            aria-controls="flush-collapseFour">
-                            Natacion
-                        </button>
-                    </h2>
-                    <div id="flush-collapseFour" class="accordion-collapse collapse"
-                        data-bs-parent="#accordionFlushExample">
-                        <!-- colapsar body -->
-                        <div class="accordion-body">
-                            <div class="accordion accordion-flush" id="Natacion">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed boton-celeste" type="button" data-bs-toggle="collapse" data-bs-target="#LunesN" aria-expanded="false" aria-controls="LunesN">
-                                            Lunes
-                                        </button>
-                                    </h2>
-                                    <div id="LunesN" class="accordion-collapse collapse" data-bs-parent="#Natacion">
-                                        <div class="accordion-body">
-                                            <!-- colapsar tabla -->
-                                            <table class="table table-dark table-hover">
-                                                <thead class="text-center">
-                                                    <tr>
-                                                        <th>Horario</th>
-                                                        <th>Disponible</th>
-                                                        <th>Reservar</th>
-                                                    </tr>
-                                                    
-                                                </thead>
-                                                <tbody class="text-center">
-                                                    <tr>
-                                                        <td>6:00 AM - 7:00 AM</td>
-                                                        <td>8</td>
-                                                        <td><button class="btn btn-primary celeste">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7:00 AM - 8:00 AM</td>
-                                                        <td>5</td>
-                                                        <td><button class="btn btn-primary celeste">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8:00 AM - 9:00 AM</td>
-                                                        <td>3</td>
-                                                        <td><button class="btn btn-primary celeste">Reservar</button></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed boton-celeste" type="button" data-bs-toggle="collapse" data-bs-target="#MartesN" aria-expanded="false" aria-controls="MartesN">
-                                            Martes
-                                        </button>
-                                    </h2>
-                                    <div id="MartesN" class="accordion-collapse collapse" data-bs-parent="#Natacion">
-                                        <div class="accordion-body">
-                                            <!-- colapsar tabla -->
-                                            <table class="table table-dark table-hover">
-                                                <thead class="text-center">
-                                                    <tr>
-                                                        <th>Horario</th>
-                                                        <th>Disponible</th>
-                                                        <th>Reservar</th>
-                                                    </tr>
-                                                    
-                                                </thead>
-                                                <tbody class="text-center">
-                                                    <tr>
-                                                        <td>6:00 AM - 7:00 AM</td>
-                                                        <td>8</td>
-                                                        <td><button class="btn btn-primary celeste">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7:00 AM - 8:00 AM</td>
-                                                        <td>5</td>
-                                                        <td><button class="btn btn-primary celeste">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8:00 AM - 9:00 AM</td>
-                                                        <td>3</td>
-                                                        <td><button class="btn btn-primary celeste">Reservar</button></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed boton-celeste" type="button" data-bs-toggle="collapse" data-bs-target="#MiercolesN" aria-expanded="false" aria-controls="MiercolesN">
-                                            Miercoles
-                                        </button>
-                                    </h2>
-                                    <div id="MiercolesN" class="accordion-collapse collapse" data-bs-parent="#Natacion">
-                                        <div class="accordion-body">
-                                            <!-- colapsar tabla -->
-                                            <table class="table table-dark table-hover">
-                                                <thead class="text-center">
-                                                    <tr>
-                                                        <th>Horario</th>
-                                                        <th>Disponible</th>
-                                                        <th>Reservar</th>
-                                                    </tr>
-                                                    
-                                                </thead>
-                                                <tbody class="text-center">
-                                                    <tr>
-                                                        <td>6:00 AM - 7:00 AM</td>
-                                                        <td>8</td>
-                                                        <td><button class="btn btn-primary celeste">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7:00 AM - 8:00 AM</td>
-                                                        <td>5</td>
-                                                        <td><button class="btn btn-primary celeste">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8:00 AM - 9:00 AM</td>
-                                                        <td>3</td>
-                                                        <td><button class="btn btn-primary celeste">Reservar</button></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div >
+                    <span class="yoga"></span>
+                    <p>Yoga</p>
                 </div>
-                <!-- Colapsar aqui -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed boton-verde" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseFive" aria-expanded="false"
-                            aria-controls="flush-collapseFive">
-                            Spinning
-                        </button>
-                    </h2>
-                    <div id="flush-collapseFive" class="accordion-collapse collapse"
-                        data-bs-parent="#accordionFlushExample">
-                        <!-- colapsar body -->
-                        <div class="accordion-body">
-                            <div class="accordion accordion-flush" id="Spinning">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed boton-verde" type="button" data-bs-toggle="collapse" data-bs-target="#LunesS" aria-expanded="false" aria-controls="LunesS">
-                                            Lunes
-                                        </button>
-                                    </h2>
-                                    <div id="LunesS" class="accordion-collapse collapse" data-bs-parent="#Spinning">
-                                        <div class="accordion-body">
-                                            <!-- colapsar tabla -->
-                                            <table class="table table-dark table-hover">
-                                                <thead class="text-center">
-                                                    <tr>
-                                                        <th>Horario</th>
-                                                        <th>Disponible</th>
-                                                        <th>Reservar</th>
-                                                    </tr>
-                                                    
-                                                </thead>
-                                                <tbody class="text-center">
-                                                    <tr>
-                                                        <td>6:00 AM - 7:00 AM</td>
-                                                        <td>8</td>
-                                                        <td><button class="btn btn-primary verde">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7:00 AM - 8:00 AM</td>
-                                                        <td>5</td>
-                                                        <td><button class="btn btn-primary verde">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8:00 AM - 9:00 AM</td>
-                                                        <td>3</td>
-                                                        <td><button class="btn btn-primary verde">Reservar</button></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed boton-verde" type="button" data-bs-toggle="collapse" data-bs-target="#MartesS" aria-expanded="false" aria-controls="MartesS">
-                                            Martes
-                                        </button>
-                                    </h2>
-                                    <div id="MartesS" class="accordion-collapse collapse" data-bs-parent="#Spinning">
-                                        <div class="accordion-body">
-                                            <!-- colapsar tabla -->
-                                            <table class="table table-dark table-hover">
-                                                <thead class="text-center">
-                                                    <tr>
-                                                        <th>Horario</th>
-                                                        <th>Disponible</th>
-                                                        <th>Reservar</th>
-                                                    </tr>
-                                                    
-                                                </thead>
-                                                <tbody class="text-center">
-                                                    <tr>
-                                                        <td>6:00 AM - 7:00 AM</td>
-                                                        <td>8</td>
-                                                        <td><button class="btn btn-primary verde">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7:00 AM - 8:00 AM</td>
-                                                        <td>5</td>
-                                                        <td><button class="btn btn-primary verde">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8:00 AM - 9:00 AM</td>
-                                                        <td>3</td>
-                                                        <td><button class="btn btn-primary verde">Reservar</button></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed boton-verde" type="button" data-bs-toggle="collapse" data-bs-target="#MiercolesS" aria-expanded="false" aria-controls="MiercolesS">
-                                            Miercoles
-                                        </button>
-                                    </h2>
-                                    <div id="MiercolesS" class="accordion-collapse collapse" data-bs-parent="#Spinning">
-                                        <div class="accordion-body">
-                                            <!-- colapsar tabla -->
-                                            <table class="table table-dark table-hover">
-                                                <thead class="text-center">
-                                                    <tr>
-                                                        <th>Horario</th>
-                                                        <th>Disponible</th>
-                                                        <th>Reservar</th>
-                                                    </tr>
-                                                    
-                                                </thead>
-                                                <tbody class="text-center">
-                                                    <tr>
-                                                        <td>6:00 AM - 7:00 AM</td>
-                                                        <td>8</td>
-                                                        <td><button class="btn btn-primary verde">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7:00 AM - 8:00 AM</td>
-                                                        <td>5</td>
-                                                        <td><button class="btn btn-primary verde">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8:00 AM - 9:00 AM</td>
-                                                        <td>3</td>
-                                                        <td><button class="btn btn-primary verde">Reservar</button></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div>
+                    <span class="spinning"></span>
+                    <p>Spinning</p>
                 </div>
-                <!-- Colapsar aqui -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed boton-naranja" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseSix" aria-expanded="false"
-                            aria-controls="flush-collapseSix">
-                            Boxeo
-                        </button>
-                    </h2>
-                    <div id="flush-collapseSix" class="accordion-collapse collapse"
-                        data-bs-parent="#accordionFlushExample">
-                        <!-- colapsar body -->
-                        <div class="accordion-body">
-                            <div class="accordion accordion-flush" id="Boxeo">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed boton-naranja" type="button" data-bs-toggle="collapse" data-bs-target="#LunesB" aria-expanded="false" aria-controls="LunesB">
-                                            Lunes
-                                        </button>
-                                    </h2>
-                                    <div id="LunesB" class="accordion-collapse collapse" data-bs-parent="#Boxeo">
-                                        <div class="accordion-body">
-                                            <!-- colapsar tabla -->
-                                            <table class="table table-dark table-hover">
-                                                <thead class="text-center">
-                                                    <tr>
-                                                        <th>Horario</th>
-                                                        <th>Disponible</th>
-                                                        <th>Reservar</th>
-                                                    </tr>
-                                                    
-                                                </thead>
-                                                <tbody class="text-center">
-                                                    <tr>
-                                                        <td>6:00 AM - 7:00 AM</td>
-                                                        <td>8</td>
-                                                        <td><button class="btn btn-primary naranja">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7:00 AM - 8:00 AM</td>
-                                                        <td>5</td>
-                                                        <td><button class="btn btn-primary naranja ">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8:00 AM - 9:00 AM</td>
-                                                        <td>3</td>
-                                                        <td><button class="btn btn-primary naranja">Reservar</button></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed boton-naranja" type="button" data-bs-toggle="collapse" data-bs-target="#MartesB" aria-expanded="false" aria-controls="MartesB">
-                                            Martes
-                                        </button>
-                                    </h2>
-                                    <div id="MartesB" class="accordion-collapse collapse" data-bs-parent="#Boxeo">
-                                        <div class="accordion-body">
-                                            <!-- colapsar tabla -->
-                                            <table class="table table-dark table-hover">
-                                                <thead class="text-center">
-                                                    <tr>
-                                                        <th>Horario</th>
-                                                        <th>Disponible</th>
-                                                        <th>Reservar</th>
-                                                    </tr>
-                                                    
-                                                </thead>
-                                                <tbody class="text-center">
-                                                    <tr>
-                                                        <td>6:00 AM - 7:00 AM</td>
-                                                        <td>8</td>
-                                                        <td><button class="btn btn-primary naranja">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7:00 AM - 8:00 AM</td>
-                                                        <td>5</td>
-                                                        <td><button class="btn btn-primary naranja">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8:00 AM - 9:00 AM</td>
-                                                        <td>3</td>
-                                                        <td><button class="btn btn-primary naranja">Reservar</button></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed boton-naranja" type="button" data-bs-toggle="collapse" data-bs-target="#MiercolesB" aria-expanded="false" aria-controls="MiercolesB">
-                                            Miercoles
-                                        </button>
-                                    </h2>
-                                    <div id="MiercolesB" class="accordion-collapse collapse" data-bs-parent="#Boxeo">
-                                        <div class="accordion-body">
-                                            <!-- colapsar tabla -->
-                                            <table class="table table-dark table-hover">
-                                                <thead class="text-center">
-                                                    <tr>
-                                                        <th>Horario</th>
-                                                        <th>Disponible</th>
-                                                        <th>Reservar</th>
-                                                    </tr>
-                                                    
-                                                </thead>
-                                                <tbody class="text-center">
-                                                    <tr>
-                                                        <td>6:00 AM - 7:00 AM</td>
-                                                        <td>8</td>
-                                                        <td><button class="btn btn-primary naranja">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7:00 AM - 8:00 AM</td>
-                                                        <td>5</td>
-                                                        <td><button class="btn btn-primary naranja">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8:00 AM - 9:00 AM</td>
-                                                        <td>3</td>
-                                                        <td><button class="btn btn-primary naranja">Reservar</button></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div>
+                    <span class="natacion"></span>
+                    <p>Natacion</p>
                 </div>
-                <!-- Colapsar aqui -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed boton-bordo" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseSeven" aria-expanded="false"
-                            aria-controls="flush-collapseSeven">
-                            Yoga
-                        </button>
-                    </h2>
-                    <div id="flush-collapseSeven" class="accordion-collapse collapse"
-                        data-bs-parent="#accordionFlushExample">
-                        <!-- colapsar body -->
-                        <div class="accordion-body">
-                            <div class="accordion accordion-flush" id="Yoga">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed boton-bordo" type="button" data-bs-toggle="collapse" data-bs-target="#LunesY" aria-expanded="false" aria-controls="LunesY">
-                                            Lunes
-                                        </button>
-                                    </h2>
-                                    <div id="LunesY" class="accordion-collapse collapse" data-bs-parent="#Yoga">
-                                        <div class="accordion-body">
-                                            <!-- colapsar tabla -->
-                                            <table class="table table-dark table-hover">
-                                                <thead class="text-center">
-                                                    <tr>
-                                                        <th>Horario</th>
-                                                        <th>Disponible</th>
-                                                        <th>Reservar</th>
-                                                    </tr>
-                                                    
-                                                </thead>
-                                                <tbody class="text-center">
-                                                    <tr>
-                                                        <td>6:00 AM - 7:00 AM</td>
-                                                        <td>8</td>
-                                                        <td><button class="btn btn-primary bordo">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7:00 AM - 8:00 AM</td>
-                                                        <td>5</td>
-                                                        <td><button class="btn btn-primary bordo">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8:00 AM - 9:00 AM</td>
-                                                        <td>3</td>
-                                                        <td><button class="btn btn-primary bordo">Reservar</button></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed boton-bordo" type="button" data-bs-toggle="collapse" data-bs-target="#MartesY" aria-expanded="false" aria-controls="MartesY">
-                                            Martes
-                                        </button>
-                                    </h2>
-                                    <div id="MartesY" class="accordion-collapse collapse" data-bs-parent="#Yoga">
-                                        <div class="accordion-body">
-                                            <!-- colapsar tabla -->
-                                            <table class="table table-dark table-hover">
-                                                <thead class="text-center">
-                                                    <tr>
-                                                        <th>Horario</th>
-                                                        <th>Disponible</th>
-                                                        <th>Reservar</th>
-                                                    </tr>
-                                                    
-                                                </thead>
-                                                <tbody class="text-center">
-                                                    <tr>
-                                                        <td>6:00 AM - 7:00 AM</td>
-                                                        <td>8</td>
-                                                        <td><button class="btn btn-primary bordo">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7:00 AM - 8:00 AM</td>
-                                                        <td>5</td>
-                                                        <td><button class="btn btn-primary bordo">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8:00 AM - 9:00 AM</td>
-                                                        <td>3</td>
-                                                        <td><button class="btn btn-primary bordo">Reservar</button></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed boton-bordo" type="button" data-bs-toggle="collapse" data-bs-target="#MiercolesY" aria-expanded="false" aria-controls="MiercolesY">
-                                            Miercoles
-                                        </button>
-                                    </h2>
-                                    <div id="MiercolesY" class="accordion-collapse collapse" data-bs-parent="#Yoga">
-                                        <div class="accordion-body">
-                                            <!-- colapsar tabla -->
-                                            <table class="table table-dark table-hover">
-                                                <thead class="text-center">
-                                                    <tr>
-                                                        <th>Horario</th>
-                                                        <th>Disponible</th>
-                                                        <th>Reservar</th>
-                                                    </tr>
-                                                    
-                                                </thead>
-                                                <tbody class="text-center">
-                                                    <tr>
-                                                        <td>6:00 AM - 7:00 AM</td>
-                                                        <td>8</td>
-                                                        <td><button class="btn btn-primary bordo">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7:00 AM - 8:00 AM</td>
-                                                        <td>5</td>
-                                                        <td><button class="btn btn-primary bordo">Reservar</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8:00 AM - 9:00 AM</td>
-                                                        <td>3</td>
-                                                        <td><button class="btn btn-primary bordo">Reservar</button></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div>
+                    <span class="boxeo"></span>
+                    <p>Boxeo</p>
                 </div>
-
             </div>
+        </div>
+        <div class="contenedor">
+            <div class="columna-dia">
+                <h3>Lunes</h3>
+
+                <div class="class-card card-crossfit">
+                    <div class="class-time">07:00 - 08:00</div>
+                    <div class="class-name">CrossFit WOD</div>
+                    <div class="class-details">
+                        <span>Coach: Alex</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-crossfit">
+                    <div class="class-time">08:00 - 09:00</div>
+                    <div class="class-name">CrossFit WOD</div>
+                    <div class="class-details">
+                        <span>Coach: Alex</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-yoga">
+                    <div class="class-time">09:00 - 10:00</div>
+                    <div class="class-name">Hatha Yoga</div>
+                    <div class="class-details">
+                        <span>Coach: Elena</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-yoga">
+                    <div class="class-time">10:00 - 11:00</div>
+                    <div class="class-name">Hatha Yoga</div>
+                    <div class="class-details">
+                        <span>Coach: Elena</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-yoga">
+                    <div class="class-time">11:00 - 12:00</div>
+                    <div class="class-name">Hatha Yoga</div>
+                    <div class="class-details">
+                        <span>Coach: Elena</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-yoga">
+                    <div class="class-time">14:00 - 15:00</div>
+                    <div class="class-name">Hatha Yoga</div>
+                    <div class="class-details">
+                        <span>Coach: Elena</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-crossfit">
+                    <div class="class-time">15:00 - 16:00</div>
+                    <div class="class-name">CrossFit WOD</div>
+                    <div class="class-details">
+                        <span>Coach: Alex</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-crossfit">
+                    <div class="class-time">16:00 - 17:00</div>
+                    <div class="class-name">CrossFit WOD</div>
+                    <div class="class-details">
+                        <span>Coach: Alex</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-crossfit">
+                    <div class="class-time">17:00 - 18:00</div>
+                    <div class="class-name">CrossFit WOD</div>
+                    <div class="class-details">
+                        <span>Coach: Alex</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="columna-dia">
+                <h3>Martes</h3>
+                
+                <div class="class-card card-levantamiento">
+                    <div class="class-time">7:00 - 8:00</div>
+                    <div class="class-name">Powerlifting</div>
+                    <div class="class-details">
+                        <span>Coach: Sarah</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-levantamiento">
+                    <div class="class-time">8:00 - 9:00</div>
+                    <div class="class-name">Powerlifting</div>
+                    <div class="class-details">
+                        <span>Coach: Sarah</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-levantamiento">
+                    <div class="class-time">9:00 - 10:00</div>
+                    <div class="class-name">Powerlifting</div>
+                    <div class="class-details">
+                        <span>Coach: Sarah</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-spinning">
+                    <div class="class-time">10:00 - 11:00</div>
+                    <div class="class-name">Spinning Power</div>
+                    <div class="class-details">
+                        <span>Coach: Leo</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-spinning">
+                    <div class="class-time">11:00 - 12:00</div>
+                    <div class="class-name">Spinning Power</div>
+                    <div class="class-details">
+                        <span>Coach: Leo</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="columna-dia">
+                <h3>Miercoles</h3>
+
+                <div class="class-card card-natacion">
+                    <div class="class-time">7:00 - 8:00</div>
+                    <div class="class-name">Natación Técnica</div>
+                    <div class="class-details">
+                        <span>Coach: Marcos</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-natacion">
+                    <div class="class-time">8:00 - 9:00</div>
+                    <div class="class-name">Natación Técnica</div>
+                    <div class="class-details">
+                        <span>Coach: Marcos</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-natacion">
+                    <div class="class-time">9:00 - 10:00</div>
+                    <div class="class-name">Natación Técnica</div>
+                    <div class="class-details">
+                        <span>Coach: Marcos</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-natacion">
+                    <div class="class-time">10:00 - 11:00</div>
+                    <div class="class-name">Natación Técnica</div>
+                    <div class="class-details">
+                        <span>Coach: Marcos</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-boxeo">
+                    <div class="class-time">11:00 - 12:00</div>
+                    <div class="class-name">Boxeo Basics</div>
+                    <div class="class-details">
+                        <span>Coach: Tyson</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-boxeo">
+                    <div class="class-time">14:00 - 15:00</div>
+                    <div class="class-name">Boxeo Basics</div>
+                    <div class="class-details">
+                        <span>Coach: Tyson</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-boxeo">
+                    <div class="class-time">15:00 - 16:00</div>
+                    <div class="class-name">Boxeo Basics</div>
+                    <div class="class-details">
+                        <span>Coach: Tyson</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-boxeo">
+                    <div class="class-time">16:00 - 17:00</div>
+                    <div class="class-name">Boxeo Basics</div>
+                    <div class="class-details">
+                        <span>Coach: Tyson</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="columna-dia">
+                <h3>Jueves</h3>
+
+                <div class="class-card card-crossfit">
+                    <div class="class-time">07:00 - 08:00</div>
+                    <div class="class-name">CrossFit WOD</div>
+                    <div class="class-details">
+                        <span>Coach: Alex</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-crossfit">
+                    <div class="class-time">08:00 - 09:00</div>
+                    <div class="class-name">CrossFit WOD</div>
+                    <div class="class-details">
+                        <span>Coach: Alex</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-yoga">
+                    <div class="class-time">09:00 - 10:00</div>
+                    <div class="class-name">Hatha Yoga</div>
+                    <div class="class-details">
+                        <span>Coach: Elena</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-yoga">
+                    <div class="class-time">10:00 - 11:00</div>
+                    <div class="class-name">Hatha Yoga</div>
+                    <div class="class-details">
+                        <span>Coach: Elena</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="columna-dia">
+                <h3>Viernes</h3>
+
+                <div class="class-card card-levantamiento">
+                    <div class="class-time">7:00 - 8:00</div>
+                    <div class="class-name">Powerlifting</div>
+                    <div class="class-details">
+                        <span>Coach: Sarah</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-levantamiento">
+                    <div class="class-time">8:00 - 9:00</div>
+                    <div class="class-name">Powerlifting</div>
+                    <div class="class-details">
+                        <span>Coach: Sarah</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-spinning">
+                    <div class="class-time">09:00 - 10:00</div>
+                    <div class="class-name">Spinning Power</div>
+                    <div class="class-details">
+                        <span>Coach: Leo</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="class-card card-spinning">
+                    <div class="class-time">10:00 - 11:00</div>
+                    <div class="class-name">Spinning Power</div>
+                    <div class="class-details">
+                        <span>Coach: Leo</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="columna-dia">
+                <h3>Sabado</h3>
+
+                <div class="class-card card-natacion">
+                    <div class="class-time">7:00 - 8:00</div>
+                    <div class="class-name">Natación Técnica</div>
+                    <div class="class-details">
+                        <span>Coach: Marcos</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="columna-dia">
+                <h3>Domingo</h3>
+
+                <div class="class-card card-boxeo">
+                    <div class="class-time">7:00 - 8:00</div>
+                    <div class="class-name">Boxeo Basics</div>
+                    <div class="class-details">
+                        <span>Coach: Tyson</span>
+                        <button class="book-btn">Reservar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer class="d-flex justify-content-around align-items-center">
-        <p>© 2025 Gimnasio Alternativo. Todos los derechos reservados.</p>
-        <div class="redes d-flex gap-3">
-            <a href="./pages/ubicacion.html"><i class="bi bi-instagram"></i></a>
-            <a href="./pages/ubicacion.html"><i class="bi bi-twitter-x"></i></a>
-            <a href="./pages/ubicacion.html"><i class="bi bi-facebook"></i></a>
+    <footer>
+        <div class="redes">
+            <h2>FITPOWER</h2>
+            <div>
+                <a href="./pages/ubicacion.html"><i class="bi bi-instagram"></i></a>
+                <a href="./pages/ubicacion.html"><i class="bi bi-twitter-x"></i></a>
+                <a href="./pages/ubicacion.html"><i class="bi bi-facebook"></i></a>
+            </div>
         </div>
-
+        <div class="contacto">
+            <h2>Contacto</h2>
+            <div class="contacto-datos">
+                <i class="bi bi-geo-alt"></i>
+                <p>Av. Siempre Viva 123. Mendoza</p>
+            </div>
+            <div class="contacto-datos">
+                <i class="bi bi-telephone"></i>
+                <p>11 1234 5678</p>
+            </div>
+            <div class="contacto-datos">
+                <i class="bi bi-envelope"></i>
+                <p>fitpower@gmail.com</p>
+            </div>
+        </div>
+        <div class="navegacion">
+            <h2>Navegacion</h2>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-0 menu-lista">
+                <li class="nav-item"><a class="nav-link menu-enlace" href="../index.html">INICIO</a></li>
+                <li class="nav-item"><a class="nav-link menu-enlace" href="../pages/precios.html">PRECIO</a></li>
+                <li class="nav-item"><a class="nav-link menu-enlace" href="../pages/horarios.html">HORARIOS</a>    </li>
+                <li class="nav-item"><a class="nav-link menu-enlace" href="../pages/galeria.html">GALERIA</a></li>
+                <li class="nav-item"><a class="nav-link menu-enlace" href="../pages/ubicacion.html">UBICACIONES</a></li>
+            </ul>
+        </div>
+        <div class="mapa">
+            <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.626556755615!2d-58.38166667499999!3d-34.60366666666666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5c2c2c2c2c2%3A0x95bcb5c2c2c2c2c2!2sGimnasio%20Alternativo!5e0!3m2!1ses!2sar!4v1703812865000!5m2!1ses!2sar"
+                    width="300" class="mapa-ubicacion" height="300" style="border:0;" allowfullscreen=""
+                    loading="lazy" referrerpolicy="no-referrer-when-downdowngrade"></iframe>
+        </div>
+        <p class="derechos">© 2025 Gimnasio Alternativo. Todos los derechos reservados.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+    <script>
+        const toggler = document.querySelector(".hamburger");
+        toggler.addEventListener("click", function () {
+            this.classList.toggle("is-active");
+        });
+    </script>
 </body>
 
 </html>

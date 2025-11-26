@@ -49,7 +49,7 @@ $color-rojo3:#850e0e;
 $color-rojo4:#870e0e;
 $color-rojo5:#bb1a1a;
 //NEGRO
-$color-negro1:#00000080;
+$color-negro1:#000000a7;
 $color-negro2:#000000b3;
 $color-negro3:#000000cc;
 $color-negro4:#000000a1;
@@ -77,11 +77,13 @@ $precio-bg-card:(
 
 //PALETA DE COLORES HORARIOS
 $horarios-bg-boton:(
-    "azul": #0202f870,
-    "violeta": #892be26c,
-    "rosa": #e91e63a1,
-    "celeste": #00bcd4a1,
-    "verde": #4caf50a1,
-    "naranja": #ff9800a1,
-    "bordo": #c80909a1,
+    "crossfit": #0202f8e8,
+    "levantamiento": #892be2ee,
+    "natacion": #e91e62d3,
+    "spinning": #00bcd4a1,
+    "yoga": #0db012cd,
+    "boxeo": #ff9800a1,
+    
 );
+
+$hamburger-layer-color: #a000ff;
