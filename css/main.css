@@ -1006,33 +1006,6 @@ body {
   transform: rotate(-90deg);
 }
 
-rect.rojo {
-  stroke: #ff0000;
-  filter: drop-shadow(0 0 8px #ff0000) drop-shadow(0 0 15px #ff0000);
-}
-
-.precios .tarjeta-1 .tarjeta-boton:hover {
-  text-shadow: 0 0 5px red, 0 0 10px red;
-}
-
-rect.rosa {
-  stroke: #ff00ff;
-  filter: drop-shadow(0 0 8px #ff00ff) drop-shadow(0 0 15px #ff00ff);
-}
-
-.precios .tarjeta-2 .tarjeta-boton:hover {
-  text-shadow: 0 0 5px #f003b5, 0 0 10px #f003b5;
-}
-
-rect.azul {
-  stroke: #0011ff;
-  filter: drop-shadow(0 0 8px #0011ff) drop-shadow(0 0 15px #0011ff);
-}
-
-.precios .tarjeta-3 .tarjeta-boton:hover {
-  text-shadow: 0 0 5px blue, 0 0 10px blue;
-}
-
 @keyframes neonGlow {
   to {
     stroke-dashoffset: -780;
@@ -1684,115 +1657,115 @@ rect.azul {
 
 /*SECTION CONTACTANOS*/
 .contactos {
-  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 20px;
+  padding-bottom: 40px;
   position: relative;
 }
 .contactos .contacto-img {
   display: none;
 }
-.contactos .cont {
+.contactos .contenedor {
   width: 100%;
-}
-.contactos .cont .title {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
-  width: 100%;
-  padding: 1rem 0;
-  border-radius: 1rem;
-  font-size: 2rem;
-  letter-spacing: 0.6rem;
-  text-transform: uppercase;
-  z-index: 1;
-  margin: 0 auto;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-  text-shadow: 0px 0px 10px #ea1c1c, 0px 0px 20px #b31459, 0px 0px 30px #850e0e, 0px 0px 40px #870e0e;
 }
-.contactos .cont .title h2 {
+.contactos .contenedor .title h2 {
   font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6rem;
+  margin-bottom: 50px;
   font-weight: bold;
+  text-shadow: 0 0 6px #ff4d94, 0 0 18px rgba(255, 77, 148, 0.7);
 }
-.contactos .cont .container-fluid .row .formulario {
-  margin-bottom: 2rem;
-}
-.contactos .cont .container-fluid .row .formulario input {
+.contactos .contenedor .formulario {
   width: 100%;
-  height: 50px;
-  border: 3px solid rgb(208, 208, 208);
-  outline: none;
-  border-radius: 0px 20px 0 20px;
-  background-color: transparent;
-  color: #fff;
-  font-size: 1.3rem;
-  box-shadow: 0px 0px 10px #bb1a1a, 0px 0px 20px #b31459, 0px 0px 5px #bb1a1a inset, 0px 0px 10px #b31459 inset;
 }
-.contactos .cont .container-fluid .row .formulario label {
-  display: inline-block;
-  background-color: rgba(133, 100, 100, 0.525);
-  width: 130px;
-  padding: 10px;
-  clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
-  border-radius: 10px 10px 0 0;
-}
-.contactos .cont .container-fluid .row .formulario textarea {
-  width: 100%;
-  height: 150px;
-  padding-top: 0.5rem;
-  padding-left: 1.2rem;
-  margin-bottom: 1rem;
-  border: 3px solid rgb(208, 208, 208);
-  outline: none;
-  border-radius: 0px 20px 0 20px;
-  background-color: transparent;
-  color: #fff;
-  font-size: 1.3rem;
-  box-shadow: 0px 0px 10px #bb1a1a, 0px 0px 20px #b31459, 0px 0px 5px #bb1a1a inset, 0px 0px 10px #b31459 inset;
-}
-.contactos .cont .container-fluid .row .formulario .boton {
-  margin: 0 auto;
-  position: relative;
-  width: 250px;
-  height: 50px;
+.contactos .contenedor .formulario form {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  background-color: transparent !important;
-  color: #fff;
-  font-size: 1.3rem;
+  flex-direction: column;
+  gap: 20px;
+}
+.contactos .contenedor .formulario form .campo {
+  position: relative;
+}
+.contactos .contenedor .formulario form .campo label {
+  position: absolute;
+  top: -12px;
+  left: 15px;
+  padding: 3px 10px;
+  font-size: 0.85rem;
+  background: #2a022a;
+  border-radius: 6px;
+  color: #ffb3d9;
+  border: 1px solid rgba(255, 77, 148, 0.4);
   font-weight: 500;
 }
-.contactos .cont .container-fluid .row .formulario .boton span a {
-  text-decoration: none;
-  color: #fff;
+.contactos .contenedor .formulario form .campo input,
+.contactos .contenedor .formulario form .campo textarea {
+  width: 100%;
+  padding: 14px 18px;
+  background: transparent;
+  border: 2px solid #ff4d94;
+  border-radius: 12px;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
 }
-.contactos .cont .container-fluid .row .formulario .boton svg {
+.contactos .contenedor .formulario form .campo input:focus,
+.contactos .contenedor .formulario form .campo textarea:focus {
+  border-color: #ff80bf;
+  box-shadow: 0 0 12px #ff4d94, 0 0 30px rgba(255, 77, 148, 0.6);
+}
+.contactos .contenedor .formulario form .campo textarea {
+  min-height: 140px;
+  resize: none;
+}
+.contactos .contenedor .formulario form .boton {
+  align-self: center;
+  padding: 14px 40px;
+  background: transparent;
+  font-size: 1rem;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 12px #ff4d94;
+  transition: 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+.contactos .contenedor .formulario form .boton svg {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  fill: #870e0e;
-  border-radius: 0 10px 0 10px;
 }
-.contactos .cont .container-fluid .row .formulario .boton svg rect {
+.contactos .contenedor .formulario form .boton svg rect {
   width: 100%;
   height: 100%;
-  stroke: rgba(131, 8, 61, 0.7019607843);
-  stroke-width: 6px;
-  stroke-dasharray: 600;
+  stroke: #ff4d94;
+  stroke-width: 2;
+  fill: none;
+  rx: 12;
+  ry: 12;
+  stroke-dasharray: 350;
+  stroke-dashoffset: 350;
+  transition: all 0.5s ease;
+}
+.contactos .contenedor .formulario form .boton:hover {
+  background: rgba(128, 26, 62, 0.6784313725);
+  color: #1b001b;
+  font-weight: bold;
+  box-shadow: 0 0 16px rgba(142, 28, 74, 0.537254902), 0 0 40px rgba(125, 16, 58, 0.568627451);
+}
+.contactos .contenedor .formulario form .boton:hover svg rect {
   stroke-dashoffset: 0;
-  border-radius: 5px;
-  filter: drop-shadow(0px 0px 5px rgba(131, 8, 61, 0.7019607843));
-}
-.contactos .cont .container-fluid .row .formulario .boton:hover {
-  font-weight: 600;
-  text-shadow: 0 0 5px #b31459, 0 0 10px #b31459;
-}
-.contactos .cont .container-fluid .row .formulario .boton:hover svg rect {
-  stroke: rgba(187, 26, 90, 0.8078431373);
-  filter: drop-shadow(0px 0px 20px rgba(131, 8, 61, 0.7019607843)) drop-shadow(0px 0px 5px #b31459);
 }
 
 /*FOOTER*/
@@ -1801,7 +1774,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(4, auto);
-  grid-template-areas: "redes redes" "navegacion contacto" "mapa mapa" "derechos derechos";
+  grid-template-areas: "redes redes" "navegacion contacto" "qr qr" "derechos derechos";
   justify-items: center;
   margin-top: auto;
   gap: 2rem;
@@ -1828,10 +1801,12 @@ footer .redes div {
 footer .redes div a {
   color: #b100ff;
   font-size: 1.5rem;
+  transition: all 0.3s ease;
 }
 footer .redes div a:hover {
   color: #fff;
   text-shadow: 0 0 5px #b100ff, 0 0 10px #ff00ff, 0 0 20px #a000ff;
+  transition: all 0.3s ease;
 }
 footer .contacto {
   grid-area: contacto;
@@ -1851,7 +1826,6 @@ footer .navegacion .menu-lista .nav-item .nav-link {
   position: relative;
   display: inline-block;
   font-size: 1rem;
-  margin: 0 0.5rem;
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1873,8 +1847,15 @@ footer .navegacion .menu-lista .nav-item .nav-link:hover {
 footer .navegacion .menu-lista .nav-item .nav-link:hover::after {
   width: 100%;
 }
-footer .mapa {
-  grid-area: mapa;
+footer .qr {
+  grid-area: qr;
+  width: 200px;
+  height: 200px;
+}
+footer .qr img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 footer .derechos {
   grid-area: derechos;
@@ -1959,10 +1940,45 @@ footer .derechos {
 }
 .page-precios .precios .tarjeta-body .tarjeta-boton {
   cursor: pointer;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 0.8rem 1rem;
+  transition: all 0.3s ease;
 }
 .page-precios .precios .tarjeta-body .tarjeta-boton a {
   text-decoration: none;
   color: white;
+}
+.page-precios .precios .tarjeta-body .boton-premium:hover {
+  border-left: 5px solid #ea1c1c;
+  border-right: 5px solid #ea1c1c;
+  box-shadow: inset 0 0 10px #ea1c1c, inset 0 0 20px #b31459;
+  transition: box-shadow 0.3s ease;
+}
+.page-precios .precios .tarjeta-body .boton-premium:hover a {
+  text-shadow: 0 0 5px #ea1c1c;
+  transition: all 0.3s ease;
+}
+.page-precios .precios .tarjeta-body .boton-plus:hover {
+  border-left: 5px solid #ff00ff;
+  border-right: 5px solid #ff00ff;
+  box-shadow: inset 0 0 10px #ff00ff, inset 0 0 20px #ff00f7;
+  transition: box-shadow 0.3s ease;
+}
+.page-precios .precios .tarjeta-body .boton-plus:hover a {
+  text-shadow: 0 0 5px #ff00ff;
+  transition: all 0.3s ease;
+}
+.page-precios .precios .tarjeta-body .boton-basico:hover {
+  border-left: 5px solid blue;
+  border-right: 5px solid blue;
+  box-shadow: inset 0 0 10px rgba(59, 81, 156, 0.8), inset 0 0 20px rgba(0, 17, 255, 0.6);
+  transition: box-shadow 0.3s ease;
+}
+.page-precios .precios .tarjeta-body .boton-basico:hover a {
+  text-shadow: 0 0 5px rgba(59, 81, 156, 0.8);
+  transition: all 0.3s ease;
 }
 .page-precios .precios .tarjeta svg {
   position: absolute;
@@ -1980,6 +1996,18 @@ footer .derechos {
   shape-rendering: geometricPrecision;
   filter: url(#glow);
   animation: neonGlow 6s linear infinite;
+}
+.page-precios .precios .tarjeta svg rect.rojo {
+  stroke: #ff0000;
+  filter: drop-shadow(0 0 8px #ff0000) drop-shadow(0 0 15px #ff0000);
+}
+.page-precios .precios .tarjeta svg rect.rosa {
+  stroke: #ff00ff;
+  filter: drop-shadow(0 0 8px #ff00ff) drop-shadow(0 0 15px #ff00ff);
+}
+.page-precios .precios .tarjeta svg rect.azul {
+  stroke: #0011ff;
+  filter: drop-shadow(0 0 8px #0011ff) drop-shadow(0 0 15px #0011ff);
 }
 
 .page-horarios {
@@ -2021,7 +2049,7 @@ footer .derechos {
   bottom: -15px;
   right: -45%;
   transform: translate(-50%, -50%);
-  box-shadow: 0px 0px 5px #d2b2f3, 0px 0px 10px purple, 0px 0px 15px indigo, 0px 0px 20px blue;
+  box-shadow: 0px 0px 5px #d2b2f3, 0px 0px 10px purple;
 }
 .page-horarios .horarios .btns .title {
   display: inline-block;
@@ -2083,15 +2111,25 @@ footer .derechos {
   display: grid;
   grid-template-columns: 1fr;
 }
+.page-horarios .contenedor .columna-dia .menu-desktop {
+  display: none;
+}
+.page-horarios .contenedor .columna-dia .menu-mobile .btn {
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  font-size: 1.5rem;
+  background: rgba(128, 128, 128, 0.454);
+  border: none;
+  border-radius: 15px;
+}
+.page-horarios .contenedor .columna-dia .menu-mobile .dropdown-menu {
+  background: transparent;
+  width: 100%;
+  padding: 1rem 0;
+}
 .page-horarios .contenedor .columna-dia {
   padding: 1rem;
-}
-.page-horarios .contenedor .columna-dia h3 {
-  padding: 1rem 0;
-  background-color: rgba(128, 128, 128, 0.518);
-  border-radius: 12px;
-  padding-left: 1rem;
-  margin-bottom: 1rem;
 }
 .page-horarios .contenedor .columna-dia .class-card {
   display: flex;
@@ -2361,37 +2399,47 @@ footer .derechos {
   }
   /*SECTION CONTACTOS*/
   .contactos {
-    display: flex;
     flex-direction: row;
-  }
-  .contactos .cont {
-    padding: 1rem;
-  }
-  .contactos .cont .formulario {
-    width: 100%;
+    align-items: stretch;
+    padding: 60px 40px;
   }
   .contactos .contacto-img {
-    display: inline-block;
-    border-radius: 10px;
+    display: block;
+    flex: 1;
   }
   .contactos .contacto-img img {
-    object-position: 60% 0%;
+    border-radius: 50px 150px 50px 150px;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(0.8) saturate(1.1) drop-shadow(0px 0px 20px rgba(110, 4, 46, 0.6));
+  }
+  .contactos .contenedor {
+    flex: 1;
+    text-align: left;
+  }
+  .contactos .contenedor .formulario {
+    max-width: 500px;
+  }
+  .contactos .contenedor .formulario .boton {
+    align-self: flex-start;
+  }
+  .contactos .title h2 {
+    font-size: 2.6rem;
   }
   footer {
     padding: 0 1rem;
     padding-top: 2rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto;
-    grid-template-areas: "redes contacto navegacion mapa" "derechos derechos derechos derechos";
+    grid-template-areas: "redes navegacion contacto qr" "derechos derechos derechos derechos";
+    gap: 0;
   }
   footer .redes {
     align-self: center;
   }
-  footer .mapa {
-    padding: 0 1rem;
+  footer .qr {
+    align-self: center;
   }
   .precios {
     grid-template-columns: repeat(2, 1fr);
@@ -2477,45 +2525,44 @@ footer .derechos {
     width: 300px;
     margin: 0 1rem;
   }
-  .contactos {
-    display: flex;
-    flex-direction: row;
-  }
-  .contactos .cont {
-    padding: 1rem;
-  }
-  .contactos .cont .formulario {
-    width: 70%;
-    margin: 0 auto;
-  }
+  /*SECTION CONTACTOS*/
   .contactos .contacto-img {
-    width: 100%;
-    display: inline-block;
+    padding-right: 2rem;
   }
   .contactos .contacto-img img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    border-radius: 50px 330px 50px 230px;
+  }
+  .contactos .contenedor {
+    padding-right: 0px;
+  }
+  .contactos .contenedor .title h2 {
+    font-size: 3rem;
+    letter-spacing: 6px;
+    margin-bottom: 40px;
+  }
+  .contactos .contenedor .formulario {
+    max-width: 650px;
   }
   footer .redes h2 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   footer .redes div {
     justify-content: space-evenly;
   }
   footer .redes div a {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   footer .contacto {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 0.8rem;
   }
   footer .contacto .contacto-datos {
     display: flex;
     justify-content: left;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
   }
   footer .contacto .contacto-datos i {
     font-size: 2rem;
@@ -2549,8 +2596,19 @@ footer .derechos {
   .page-horarios .contenedor {
     grid-template-columns: repeat(7, 1fr);
   }
+  .page-horarios .contenedor .columna-dia .menu-mobile {
+    display: none;
+  }
+  .page-horarios .contenedor .columna-dia .menu-desktop {
+    display: block;
+  }
   .page-horarios .contenedor .columna-dia h3 {
     font-size: 1.3rem;
+    padding: 1rem 0;
+    background-color: rgba(128, 128, 128, 0.518);
+    border-radius: 12px;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
   }
   .page-horarios .contenedor .columna-dia .class-card {
     flex-direction: column;

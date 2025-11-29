@@ -621,116 +621,141 @@
 }
 
 /*SECTION CONTACTANOS*/
-.contactos{
-    padding:0 !important;
+.contactos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 20px;
+    padding-bottom: 40px;
+    position: relative;
+
     
-    position:relative;
-
-
-    .contacto-img{
-        display:none;
-        
+    .contacto-img {
+        display: none;
     }
 
-    .cont{
+  
+    .contenedor {
         width: 100%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
         
         .title{
-            @include flex (flex,space-evenly,center);
-            width: 100%;
             
-            padding: 1rem 0;
-            border-radius: 1rem;
-            font-size: 2rem;
-            letter-spacing: 0.6rem;
-            text-transform: uppercase;
-            z-index: 1;
-            margin: 0 auto;
-            text-transform: uppercase;
-            margin-bottom: 2rem;
-            @include shadow-contacto;
-    
-            h2{
+            h2 {
                 font-size: 2.5rem;
+                text-transform: uppercase;
+                letter-spacing: 0.6rem;
+                margin-bottom: 50px;
                 font-weight: bold;
+                text-shadow: 0 0 6px #ff4d94, 0 0 18px rgba(255, 77, 148, 0.7);
             }
+        } 
+
+        .formulario {
+            width: 100%;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .campo {
+                    position: relative;
             
-    
-        }
-    
-        .container-fluid{
-            .row{
-                .formulario{
-                    margin-bottom: 2rem;
-    
-                    
-    
-                    input{
-                            width: 100%;
-                            height:50px;
-                            border: 3px solid rgb(208, 208, 208);                     
-                            outline: none;
-                            border-radius:0px 20px 0 20px;
-                            background-color: transparent;
-                            color:$color-tipografia;
-                            font-size: 1.3rem;
-                            box-shadow:
-                                0px 0px 10px $color-rojo5,
-                                0px 0px 20px $color-rojo2,
-                                
-                                0px 0px 5px $color-rojo5 inset,
-                                0px 0px 10px $color-rojo2 inset;
+                    label {
+                        position: absolute;
+                        top: -12px;
+                        left: 15px;
+                        padding: 3px 10px;
+                        font-size: 0.85rem;
+                        background: #2a022a;
+                        border-radius: 6px;
+                        color: #ffb3d9;
+                        border: 1px solid rgba(255, 77, 148, 0.4);
+                        font-weight: 500;
                     }
-                   
-                    label{
-                        display: inline-block;
-                        background-color: rgba(133, 100, 100, 0.525);
-                        width: 130px;
-                        padding:10px;
-                        clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
-                        
-                        border-radius: 10px 10px 0 0;
-                    }
-    
-                    textarea{
+            
+                    input,
+                    textarea {
                         width: 100%;
-                        height: 150px;
-                        padding-top: 0.5rem;
-                        padding-left: 1.2rem;
-                        margin-bottom: 1rem;
-                        border: 3px solid rgb(208, 208, 208);
+                        padding: 14px 18px;
+                        background: transparent;
+                        border: 2px solid #ff4d94;
+                        border-radius: 12px;
+                        color: white;
+                        font-size: 1rem;
+                        transition: all 0.3s ease;
                         outline: none;
-                        border-radius:0px 20px 0 20px;
-                        background-color: transparent;
-                        color:$color-tipografia;
-                        font-size: 1.3rem;
-                        box-shadow:
-                            0px 0px 10px $color-rojo5,
-                            0px 0px 20px $color-rojo2,
-                            0px 0px 5px $color-rojo5 inset,
-                            0px 0px 10px $color-rojo2 inset;
                     }
-    
-                    @include shadow-contacto-boton;
-    
-                }
-    
-                
-                    
-                  
-    
-                
-    
-                
-                
-                
-            }
             
+                    input:focus,
+                    textarea:focus {
+                        border-color: #ff80bf;
+                        box-shadow: 0 0 12px #ff4d94, 0 0 30px rgba(255, 77, 148, 0.6);
+                    }
+            
+                    textarea {
+                        min-height: 140px;
+                        resize: none;
+                    }
+                }
+
+
+                .boton {
+                    align-self: center;
+                    padding: 14px 40px;
+                    background: transparent;
+                    font-size: 1rem;
+                    color: white;
+                    border-radius: 12px;
+                    cursor: pointer;
+                    box-shadow: 0 0 12px #ff4d94;
+                    transition: 0.4s ease;
+                    position: relative;
+                    overflow: hidden;
+            
+                        svg {
+                            position: absolute;
+                            inset: 0;
+                            width: 100%;
+                            height: 100%;
+                
+                            rect {
+                                width: 100%;
+                                height: 100%;
+                                stroke: #ff4d94;
+                                stroke-width: 2;
+                                fill: none;
+                                rx: 12;
+                                ry: 12;
+                                stroke-dasharray: 350;
+                                stroke-dashoffset: 350;
+                                transition: all 0.5s ease;
+                            }
+                        }
+            
+                    &:hover {
+                        background: #801a3ead;
+                        color: #1b001b;
+                        font-weight: bold;
+                        box-shadow: 0 0 16px #8e1c4a89, 0 0 40px #7d103a91;
+            
+                        svg rect {
+                            stroke-dashoffset: 0;
+                        }
+                    }
+                }
+            }
+        
+        
         }
     }
-
+  
 }
-
 
 /*FOOTER*/
 footer{
@@ -741,7 +766,7 @@ footer{
     grid-template-areas:
     "redes redes"
     "navegacion contacto"
-    "mapa mapa"
+    "qr qr"
     "derechos derechos";
     justify-items: center;
     margin-top: auto;
@@ -768,10 +793,12 @@ footer{
             a{
                 color:$color-violeta1;
                 font-size: 1.5rem;
+                transition:all 0.3s ease;
 
                 &:hover{
                     color:$color-tipografia;
                     @include shadow-link-boton;
+                    transition:all 0.3s ease;
                 }
             }
         }
@@ -795,7 +822,7 @@ footer{
                     position: relative;
                     display: inline-block;
                     font-size: 1rem;
-                    margin: 0 0.5rem;
+                    // margin: 0 0.5rem;
                     transition: all 0.3s ease;
                     text-transform: uppercase;
                     letter-spacing: 1px;
@@ -823,8 +850,14 @@ footer{
             }
         }
     }
-    .mapa{
-        grid-area:mapa;
+    .qr{
+        grid-area:qr;
+        width: 200px;
+        height: 200px;
+        img{
+            @include imagen;
+            
+        }
     }
     .derechos{
         grid-area:derechos;

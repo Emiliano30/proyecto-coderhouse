@@ -144,32 +144,43 @@
         }
     }
     /*SECTION CONTACTOS*/
-    .contactos{
-        display:flex;
-        flex-direction:row;
+    .contactos {
+        flex-direction: row;
+        align-items: stretch;
+        padding: 60px 40px;
         
-        .cont{
-            padding:1rem;
-            .formulario{
+
+        .contacto-img {
+            display: block; 
+            flex: 1;
+            img {
+                border-radius: 50px 150px 50px 150px;
                 width: 100%;
-            }
-        }
-        
-        .contacto-img{
-            display:inline-block;
-            
-            border-radius:10px;
-            
-            
-            img{
-                object-position: 60% 0%;
-                @include imagen;
-            
-                
+                height: 100%;
+                object-fit: cover;
+                filter: brightness(0.8) saturate(1.1) drop-shadow(0px 0px 20px rgba(110, 4, 46, 0.6));
             }
         }
 
+        .contenedor {
+            flex: 1;
+            text-align: left;
+            .formulario {
+                max-width: 500px;
+
+                .boton {
+                    align-self: flex-start;
+                }
+            }
+
+        }
+
+        .title h2 {
+        font-size: 2.6rem;
+        }
+
     }
+    
 
     footer{
         padding:0 1rem;
@@ -177,14 +188,16 @@
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows:auto auto;
         grid-template-areas:
-        "redes contacto navegacion mapa"
+        "redes navegacion contacto qr"
         "derechos derechos derechos derechos";
+        gap:0;
         .redes{
             align-self: center;
         }
 
-        .mapa{
-            padding:0 1rem;
+        .qr{
+            
+            align-self:center;
         }
         
     }

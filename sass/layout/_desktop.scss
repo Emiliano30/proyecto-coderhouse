@@ -114,43 +114,40 @@
         }
 
     }
-
-     .contactos{
-        display:flex;
-        flex-direction:row;
-        
-        
-        .cont{
-            padding:1rem;
-            .formulario{
-                width: 70%;
-                margin:0 auto;
+    /*SECTION CONTACTOS*/
+    .contactos {
+        .contacto-img {
+            padding-right:2rem;
+            img {
+                width: 100%;
+                border-radius: 50px 330px 50px 230px;
             }
         }
-        
-        .contacto-img{
-            width: 100%;
-            display:inline-block;
-            
-            
-            img{
-                @include imagen;
-            
-                
+    
+
+        .contenedor {
+            padding-right: 0px;
+            .title h2 {
+                font-size: 3rem;
+                letter-spacing: 6px;
+                margin-bottom: 40px;
+            }
+            .formulario {
+                max-width: 650px;
             }
         }
-
     }
+   
 
     footer{
         .redes{
             h2{
-                font-size: 3rem;
+                font-size: 2rem;
             }
             div{
                 justify-content: space-evenly;
                 a{
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                 }
             }
         }
@@ -158,11 +155,11 @@
         .contacto{
             display: flex;
             flex-direction: column;
-            gap:1.5rem;
+            gap:0.8rem;
             .contacto-datos{
 
                 @include flex(flex,left,center);
-                gap:2rem;
+                gap:1rem;
                 i{
                     font-size: 2rem;
                     padding-bottom:1rem;
@@ -215,9 +212,19 @@
             grid-template-columns: repeat(7,1fr);
 
             .columna-dia{
-
+                .menu-mobile{
+                    display:none;
+                }
+                .menu-desktop{
+                    display:block;
+                }
                 h3{
                     font-size:1.3rem;
+                    padding:1rem 0;
+                    background-color: rgba(128, 128, 128, 0.518);
+                    border-radius:12px;
+                    padding-left:1rem;
+                    margin-bottom:1rem;
                 }
                 .class-card{
                         flex-direction:column;

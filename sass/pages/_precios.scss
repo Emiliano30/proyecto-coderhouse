@@ -9,7 +9,6 @@
     
 
     .precios{
-        
         display: grid;
         gap: 1rem;
         place-items: center;
@@ -84,10 +83,55 @@
 
                 .tarjeta-boton{
                     cursor: pointer;
+                    width:50%;
+                    margin: 0 auto;
+                    border-radius:20px;
+                    padding:0.8rem 1rem;
+                    transition: all 0.3s ease;
                     
                     a{
                         text-decoration: none;
                         color: white;
+                    }
+                }
+
+                .boton-premium{
+                    &:hover{
+                        border-left:5px solid $color-rojo1;
+                        border-right:5px solid $color-rojo1;
+                        
+                        box-shadow:inset 0 0 10px $color-rojo1, inset 0 0 20px $color-rojo2;
+                        transition: box-shadow 0.3s ease;
+                        a{
+                            text-shadow: 0 0 5px $color-rojo1;
+                            transition:all 0.3s ease;
+                        }
+                    }
+                }
+                .boton-plus{
+                    &:hover{
+                        border-left:5px solid $color-rosa1;
+                        border-right:5px solid $color-rosa1;
+                        
+                        box-shadow:inset 0 0 10px $color-rosa1, inset 0 0 20px $color-rosa2;
+                        transition: box-shadow 0.3s ease;
+                        a{
+                            text-shadow: 0 0 5px $color-rosa1;
+                            transition:all 0.3s ease;
+                        }
+                    }
+                }
+                .boton-basico{
+                    &:hover{
+                        border-left:5px solid $color-blue;
+                        border-right:5px solid $color-blue;
+                        
+                        box-shadow:inset 0 0 10px $color-blue2, inset 0 0 20px $color-blue3;
+                        transition: box-shadow 0.3s ease;
+                        a{
+                            text-shadow: 0 0 5px $color-blue2;
+                            transition:all 0.3s ease;
+                        }
                     }
                 }
             }
@@ -110,6 +154,13 @@
                     shape-rendering: geometricPrecision;
                     filter: url(#glow);
                     animation: neonGlow 6s linear infinite;
+                }
+
+                @each $nombre, $color in $precio-bg-card{
+                    rect.#{$nombre}{
+                        stroke: $color;
+                        filter: drop-shadow(0 0 8px $color) drop-shadow(0 0 15px $color);
+                    }
                 }
             }
 

@@ -146,7 +146,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            fill: $color-rojo4;
+            fill: $color-rojo1;
             border-radius:0 10px 0 10px;
 
             rect{
@@ -164,7 +164,7 @@
         &:hover{
             font-weight: 600;
             text-shadow: 
-                0 0 5px $color-rojo2,
+                0 0 5px $color-rojo1,
                 0 0 10px $color-rojo2;
             svg{
                 rect{
@@ -214,47 +214,10 @@
 
 
 //MIXIN TARJETA PRECIOS
-@each $nombre, $color in $precio-bg-card{
-    rect.#{$nombre}{
-        stroke: $color;
-        filter: drop-shadow(0 0 8px $color) drop-shadow(0 0 15px $color);
-    };
-    @if $nombre == "rojo"{
-        .precios{
-            .tarjeta-1{
-                .tarjeta-boton{
-                    &:hover{
-                        text-shadow:
-                        0 0 5px red,
-                        0 0 10px red;
-                    }
-                }
-            }
-        }
-    } @else if $nombre == "rosa"{
-        .precios{
-            .tarjeta-2{
-                .tarjeta-boton{
-                    &:hover{
-                        text-shadow: 
-                        0 0 5px #f003b5,
-                        0 0 10px #f003b5;
-                    }
-                }
-            }
-        }
-    } @else{
-        .precios{
-            .tarjeta-3{
-                .tarjeta-boton{
-                    &:hover{
-                        text-shadow: 
-                        0 0 5px blue,
-                        0 0 10px blue;
-                    }
-                }
-            }
-        }
-    }
-}
+// @each $nombre, $color in $precio-bg-card{
+//     rect.#{$nombre}{
+//         stroke: $color;
+//         filter: drop-shadow(0 0 8px $color) drop-shadow(0 0 15px $color);
+//     }
+// }
 
