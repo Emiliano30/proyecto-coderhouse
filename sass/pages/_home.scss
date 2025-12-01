@@ -10,7 +10,7 @@
 /*HEADER*/
 .header{
     .navegador{
-        @include imagen-bg("../../img/Fondo_Header_Gimnasio_Alternativo.png");
+        @include imagen-bg("../img/Fondo_Header_Gimnasio_Alternativo.png");
         backdrop-filter: blur(8px);
         padding: 0.5rem 1rem;
 

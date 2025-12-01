@@ -1138,7 +1138,7 @@ body {
 }
 /*HEADER*/
 .header .navegador {
-  background-image: url("../../img/Fondo_Header_Gimnasio_Alternativo.png");
+  background-image: url("../img/Fondo_Header_Gimnasio_Alternativo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
