@@ -2273,6 +2273,83 @@ footer .derechos {
   color: whitesmoke;
 }
 
+.page-galeria .galeria-header {
+  text-align: center;
+  padding: 60px 20px;
+}
+.page-galeria .galeria-header h2 {
+  font-size: 3rem;
+}
+.page-galeria .galeria-header p {
+  color: #ddd;
+  font-size: 1.1rem;
+}
+.page-galeria .galeria-header .galeria-filtros {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+.page-galeria .galeria-header .galeria-filtros button {
+  background: #3a0068;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.page-galeria .galeria-header .galeria-filtros button.activo, .page-galeria .galeria-header .galeria-filtros button:hover {
+  background: linear-gradient(90deg, #ff0080, #b026ff);
+  transform: scale(1.05);
+}
+.page-galeria .galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 30px 10%;
+  max-width: 1800px;
+  margin: auto;
+}
+.page-galeria .galeria-grid .card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: transform 0.3s;
+  border: #3a0068 2px solid;
+}
+.page-galeria .galeria-grid .card:hover {
+  transform: scale(1.03);
+}
+.page-galeria .galeria-grid .card img, .page-galeria .galeria-grid .card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.page-galeria .galeria-grid .card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.page-galeria .galeria-grid .card .overlay h3 {
+  color: #fff;
+  font-size: 1.6rem;
+}
+.page-galeria .galeria-grid .card .overlay:hover {
+  opacity: 1;
+}
+
 @media screen and (min-width: 768px) {
   /*MAIN*/
   .grid {
@@ -2443,6 +2520,48 @@ footer .derechos {
   }
   .precios {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .page-galeria .galeria-grid {
+    grid-template-areas: "card-8 card-2" "card-8 card-13" "card-7 card-5" "card-6 card-5" "card-4 card-4" "card-1 card-9" "card-10 card-9" "card-11 card-12" "card-11 card-3";
+  }
+  .page-galeria .galeria-grid .card-1 {
+    grid-area: card-1;
+  }
+  .page-galeria .galeria-grid .card-2 {
+    grid-area: card-2;
+  }
+  .page-galeria .galeria-grid .card-3 {
+    grid-area: card-3;
+  }
+  .page-galeria .galeria-grid .card-4 {
+    grid-area: card-4;
+  }
+  .page-galeria .galeria-grid .card-5 {
+    grid-area: card-5;
+  }
+  .page-galeria .galeria-grid .card-6 {
+    grid-area: card-6;
+  }
+  .page-galeria .galeria-grid .card-7 {
+    grid-area: card-7;
+  }
+  .page-galeria .galeria-grid .card-8 {
+    grid-area: card-8;
+  }
+  .page-galeria .galeria-grid .card-9 {
+    grid-area: card-9;
+  }
+  .page-galeria .galeria-grid .card-10 {
+    grid-area: card-10;
+  }
+  .page-galeria .galeria-grid .card-11 {
+    grid-area: card-11;
+  }
+  .page-galeria .galeria-grid .card-12 {
+    grid-area: card-12;
+  }
+  .page-galeria .galeria-grid .card-13 {
+    grid-area: card-13;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -2627,6 +2746,9 @@ footer .derechos {
   }
   .page-horarios .contenedor .columna-dia .class-card .class-details .book-btn {
     padding: 0.2rem;
+  }
+  .page-galeria .galeria-grid {
+    grid-template-areas: "card-8 card-8 card-2" "card-7 card-13 card-13" "card-7 card-6 card-5" "card-4 card-4 card-5" "card-1 card-1 card-9" "card-10 card-11 card-12" "card-10 card-3 card-12";
   }
 }
 
