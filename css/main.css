@@ -1880,7 +1880,7 @@ footer .derechos {
 }
 .page-precios .precios::before {
   content: "";
-  background-image: url("../../img/fondo-precios.png");
+  background-image: url("../img/fondo-precios.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2026,7 +2026,7 @@ footer .derechos {
 .page-horarios .horarios::before {
   position: absolute;
   content: "";
-  background-image: url("../../img/calendario.png");
+  background-image: url("../img/calendario.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

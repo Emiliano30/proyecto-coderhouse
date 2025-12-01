@@ -19,7 +19,7 @@
 
         &::before{
             content: "";
-            @include imagen-bg ("../../img/fondo-precios.png");
+            @include imagen-bg ("../img/fondo-precios.png");
             inset:0;
             position:absolute;
             opacity: 0.2;
