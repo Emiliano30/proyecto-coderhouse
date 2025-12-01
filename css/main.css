@@ -2324,6 +2324,9 @@ footer .derechos {
 .page-galeria .galeria-grid .card:hover {
   transform: scale(1.03);
 }
+.page-galeria .galeria-grid .card:hover .overlay {
+  opacity: 1;
+}
 .page-galeria .galeria-grid .card img, .page-galeria .galeria-grid .card video {
   width: 100%;
   height: 100%;
@@ -2331,23 +2334,25 @@ footer .derechos {
 }
 .page-galeria .galeria-grid .card .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 10px;
+  left: 10px;
+  padding: 0.2rem 0.5rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.6);
+  text-shadow: 0 0 6px #c00fa5, 0 0 12px rgba(189, 17, 163, 0.6549019608), 0 0 22px rgba(193, 3, 165, 0.6274509804), 0 0 40px rgba(232, 6, 198, 0.8274509804);
+  background-color: rgba(0, 0, 0, 0.6549019608);
   opacity: 0;
   transition: opacity 0.4s;
+  border-radius: 20px;
 }
 .page-galeria .galeria-grid .card .overlay h3 {
   color: #fff;
   font-size: 1.6rem;
 }
-.page-galeria .galeria-grid .card .overlay:hover {
-  opacity: 1;
+
+.page-ubicaciones main {
+  min-height: 100vh;
 }
 
 @media screen and (min-width: 768px) {

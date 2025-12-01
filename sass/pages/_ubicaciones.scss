@@ -1,0 +1,9 @@
+@use "../utilities/hamburger" as *;
+@use "../utilities/mixin" as *;
+@use "../utilities/variables" as *;
+
+.page-ubicaciones{
+    main{
+        min-height: 100vh;;
+    }
+}
