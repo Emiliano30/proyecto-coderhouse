@@ -2026,9 +2026,8 @@ footer .derechos {
 .page-horarios .horarios::before {
   position: absolute;
   content: "";
-  background-image: url("../img/calendario.png");
+  background-image: url(../../img/calendario.png);
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
   background-position: 50% 37%;
   inset: 0;
