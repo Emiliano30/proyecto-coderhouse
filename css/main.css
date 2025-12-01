@@ -2028,6 +2028,7 @@ footer .derechos {
   content: "";
   background-image: url("../img/calendario.png");
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   background-position: 50% 37%;
   inset: 0;

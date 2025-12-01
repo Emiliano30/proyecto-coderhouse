@@ -21,9 +21,7 @@
         &::before{
             position: absolute;
             content: "";
-            background-image: url("../img/calendario.png");
-            background-size: cover;
-            background-repeat: no-repeat;
+            @include imagen-bg ("../img/calendario.png");
             background-position: 50% 37%;
             inset: 0;
             opacity: 0.2;
