@@ -2022,17 +2022,7 @@ footer .derechos {
   flex-direction: column;
   position: relative;
   padding-bottom: 4rem;
-}
-.page-horarios .horarios::before {
-  position: absolute;
-  content: "";
-  background-image: url(../../img/calendario.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 37%;
-  inset: 0;
-  opacity: 0.2;
-  z-index: -4;
+  background-image: url("../../img/calendario.png");
 }
 .page-horarios .horarios .btns {
   padding: 1rem;
