@@ -156,12 +156,7 @@
                     animation: neonGlow 6s linear infinite;
                 }
 
-                @each $nombre, $color in $precio-bg-card{
-                    rect.#{$nombre}{
-                        stroke: $color;
-                        filter: drop-shadow(0 0 8px $color) drop-shadow(0 0 15px $color);
-                    }
-                }
+            
             }
 
         }

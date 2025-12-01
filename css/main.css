@@ -1006,6 +1006,21 @@ body {
   transform: rotate(-90deg);
 }
 
+rect.rojo {
+  stroke: #ff0000;
+  filter: drop-shadow(0 0 8px #ff0000) drop-shadow(0 0 15px #ff0000);
+}
+
+rect.rosa {
+  stroke: #ff00ff;
+  filter: drop-shadow(0 0 8px #ff00ff) drop-shadow(0 0 15px #ff00ff);
+}
+
+rect.azul {
+  stroke: #0011ff;
+  filter: drop-shadow(0 0 8px #0011ff) drop-shadow(0 0 15px #0011ff);
+}
+
 @keyframes neonGlow {
   to {
     stroke-dashoffset: -780;
@@ -1996,18 +2011,6 @@ footer .derechos {
   shape-rendering: geometricPrecision;
   filter: url(#glow);
   animation: neonGlow 6s linear infinite;
-}
-.page-precios .precios .tarjeta svg rect.rojo {
-  stroke: #ff0000;
-  filter: drop-shadow(0 0 8px #ff0000) drop-shadow(0 0 15px #ff0000);
-}
-.page-precios .precios .tarjeta svg rect.rosa {
-  stroke: #ff00ff;
-  filter: drop-shadow(0 0 8px #ff00ff) drop-shadow(0 0 15px #ff00ff);
-}
-.page-precios .precios .tarjeta svg rect.azul {
-  stroke: #0011ff;
-  filter: drop-shadow(0 0 8px #0011ff) drop-shadow(0 0 15px #0011ff);
 }
 
 .page-horarios {
