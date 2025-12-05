@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explora las instalaciones de FITPOWER a través de nuestra galería. Descubre nuestros espacios de entrenamiento, pileta, ring de boxeo y zonas de relax. ¡Mira dónde entrenarás!">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -10,15 +13,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css">
-    
+
     <title>Galeria</title>
 </head>
+
 <body class="page-galeria">
 
     <header class="header">
         <nav class="navbar navbar-expand-lg navegador">
             <div class="container-fluid">
-                <a class="navbar-brand logo" href="../index.html"><h1>FITPOWER</h1></a>
+                <a class="navbar-brand logo" href="../index.html">
+                    <h1>FITPOWER</h1>
+                </a>
 
                 <button class="hamburger hamburger--collapse navbar-toggler custom-toggler" type="button"
                     data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
@@ -31,20 +37,28 @@
                 <div class="collapse navbar-collapse colapsable" id="navbarNav">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-0 menu-lista">
                         <li class="nav-item"><a class="nav-link menu-enlace" href="../index.html">INICIO</a></li>
-                        <li class="nav-item"><a class="nav-link menu-enlace" href="../pages/precios.html">PRECIO</a></li>
-                        <li class="nav-item"><a class="nav-link menu-enlace" href="../pages/horarios.html">HORARIOS</a></li>
-                        <li class="nav-item"><a class="nav-link menu-enlace" href="../pages/galeria.html">GALERIA</a></li>
-                        <li class="nav-item"><a class="nav-link menu-enlace" href="../pages/ubicacion.html">UBICACIONES</a></li>
+                        <li class="nav-item"><a class="nav-link menu-enlace" href="../pages/precios.html">PRECIO</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link menu-enlace" href="../pages/horarios.html">HORARIOS</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link menu-enlace" href="../pages/galeria.html">GALERIA</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link menu-enlace"
+                                href="../pages/ubicacion.html">UBICACIONES</a></li>
                     </ul>
 
                     <div class="botones d-flex flex-column flex-lg-row gap-2 mt-3 mt-lg-0 ms-lg-3">
                         <div class="boton active">
                             <span>SUSCRIBIRSE</span>
-                            <svg><rect x="0" y="0" fill="none"></rect></svg>
+                            <svg>
+                                <rect x="0" y="0" fill="none"></rect>
+                            </svg>
                         </div>
                         <div class="boton">
                             <span>INICIAR SESIÓN</span>
-                            <svg><rect x="0" y="0" fill="none"></rect></svg>
+                            <svg>
+                                <rect x="0" y="0" fill="none"></rect>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -57,7 +71,7 @@
         <section class="galeria-header">
             <h2>Galería</h2>
             <p>Explorá nuestras instalaciones, entrenamientos y momentos únicos en FITPOWER.</p>
-            
+
             <div class="galeria-filtros">
                 <button class="activo">Todos</button>
                 <button>Boxeo</button>
@@ -71,68 +85,100 @@
         <section class="galeria-grid">
 
             <div class="card card-1">
-                <img src="../img/salon-boxeo.png" alt="">
-                <div class="overlay"><h3>Boxeo</h3></div>
+                <img src="../img/salon-boxeo.png"
+                    alt="Interior de un gimnasio de boxeo con iluminación ambiental morada y rosa, un ring central, sacos de boxeo colgados y un letrero de neón en la pared de ladrillo que dice FITPOWER.">
+                <div class="overlay">
+                    <h3>Boxeo</h3>
+                </div>
             </div>
 
             <div class="card card-2">
-                <img src="../img/salon-crossfit.png" alt="">
-                <div class="overlay"><h3>Crossfit</h3></div>
+                <img src="../img/salon-crossfit.png"
+                    alt="Grupo de personas entrenando con pesas y barras en un gimnasio espacioso con una estructura metálica central, pesas rusas, balones medicinales, y un letrero de neón 'FITPOWER' bajo iluminación morada y rosa.">
+                <div class="overlay">
+                    <h3>Crossfit</h3>
+                </div>
             </div>
 
             <div class="card card-3">
-                <img src="../img/salon-yoga.png" alt="">
-                <div class="overlay"><h3>Yoga</h3></div>
+                <img src="../img/salon-yoga.png"
+                    alt="Estudio de yoga sereno con iluminación ambiental suave, colchonetas extendidas sobre suelo de madera, un mandala iluminado en la pared, plantas decorativas y un gran ventanal arqueado con vistas al jardín.">
+                <div class="overlay">
+                    <h3>Yoga</h3>
+                </div>
             </div>
-            
+
             <div class="card card-4">
                 <video autoplay muted loop src="../img/Creación_de_video_con_imágenes.mp4"></video>
-                <div class="overlay"><h3>Natación, Spinning y Pesas</h3></div>
+                <div class="overlay">
+                    <h3>Natación, Spinning y Pesas</h3>
+                </div>
             </div>
 
             <div class="card card-5">
-                <img src="../img/salon-natacion.png" alt="">
-                <div class="overlay"><h3>Natación</h3></div>
+                <img src="../img/salon-natacion.png"
+                    alt="Piscina cubierta de lujo con iluminación ambiental de neón morada y rosa, vapor sobre el agua, carriles de natación marcados, tumbonas de descanso y un letrero luminoso 'FITPOWER' en la pared reflejándose en el agua.">
+                <div class="overlay">
+                    <h3>Natación</h3>
+                </div>
             </div>
 
             <div class="card card-6">
-                <img src="../img/funcional.png" alt="">
-                <div class="overlay"><h3>Crossfit</h3></div>
+                <img src="../img/funcional.png"
+                    alt="Hombre y mujer realizando un entrenamiento intenso con cuerdas de batalla, creando ondas, en un gimnasio oscuro iluminado dramáticamente con luces lineales púrpuras y rosadas.">
+                <div class="overlay">
+                    <h3>Crossfit</h3>
+                </div>
             </div>
 
             <div class="card card-7">
-                <img src="../img/salon-levantamiento.png" alt="">
-                <div class="overlay"><h3>Pesas</h3></div>
+                <img src="../img/salon-levantamiento.png"
+                    alt="Zona de levantamiento de pesas equipada con jaulas de potencia negras, barras olímpicas sobre plataformas de madera y bancos de entrenamiento. El espacio tiene un estilo industrial con paredes de ladrillo y está bañado en iluminación de neón morada y rosa.">
+                <div class="overlay">
+                    <h3>Pesas</h3>
+                </div>
             </div>
 
             <div class="card card-8">
                 <video autoplay muted loop src="../img/Video_Presentación_Gimnasio_Dinámico.mp4"></video>
-                <div class="overlay"><h3>Yoga y Levantamiento</h3></div>
+                <div class="overlay">
+                    <h3>Yoga y Levantamiento</h3>
+                </div>
             </div>
 
             <div class="card card-9">
-                <img src="../img/Boxeo Entrenamiento.png" alt="">
-                <div class="overlay"><h3>Boxeo</h3></div>
+                <img src="../img/Boxeo Entrenamiento.png" alt="Dos boxeadores haciendo sparring en un ring central iluminado por una luz cuadrada, rodeados de personas entrenando con sacos. El gimnasio oscuro de estilo industrial tiene paredes de ladrillo y letreros de neón 'FIGHT CLUB' y 'TRAIN HARD' bajo luces moradas y rosas.">
+                <div class="overlay">
+                    <h3>Boxeo</h3>
+                </div>
             </div>
 
             <div class="card card-10">
-                <img src="../img/salon-spinning.png" alt="">
-                <div class="overlay"><h3>Spinning</h3></div>
+                <img src="../img/salon-spinning.png" alt="Sala de ciclo indoor oscura y moderna con filas de bicicletas estáticas orientadas hacia el podio del instructor. El estudio cuenta con espejos de pared completa y está iluminado dramáticamente con luces de neón lineales moradas y rosas en el techo.">
+                <div class="overlay">
+                    <h3>Spinning</h3>
+                </div>
             </div>
 
             <div class="card card-11">
-                <img src="../img/Yoga Entrenamiento.png" alt="">
-                <div class="overlay"><h3>Yoga</h3></div>
+                <img src="../img/Yoga Entrenamiento.png" alt="Clase de yoga en grupo dentro de un estudio sereno iluminado por una luz ambiental violeta en el techo. En la pared central destaca un gran mandala brillante con luz cálida, y hay grandes ventanales en arco con vistas al jardín al atardecer.">
+                <div class="overlay">
+                    <h3>Yoga</h3>
+                </div>
             </div>
 
             <div class="card card-12">
-                <img src="../img/Crossfit Entrenamiento.png" alt="">
-                <div class="overlay"><h3>Crossfit</h3></div>
+                <img src="../img/Crossfit Entrenamiento.png" alt="Clase grupal de CrossFit en un gimnasio de estilo industrial con paredes de ladrillo. Varios atletas levantan barras olímpicas simultáneamente bajo una iluminación de neón morada y rosa. En la pared del fondo destacan letreros luminosos con las palabras 'STRENGTH' y 'COMMUNITY'.">
+                <div class="overlay">
+                    <h3>Crossfit</h3>
+                </div>
             </div>
 
             <div class="card card-13">
-                <img src="../img/Natación Piscina.png" alt="">
-                <div class="overlay"><h3>Natacion</h3></div>
+                <img src="../img/Natación Piscina.png" alt="Piscina cubierta de lujo en ambiente nocturno, iluminada con luces de neón moradas y rosas. El agua está cubierta de vapor suave y refleja un gran letrero luminoso 'FITPOWER' en la pared del fondo. A la izquierda, hay tumbonas de descanso alineadas frente a grandes ventanales.">
+                <div class="overlay">
+                    <h3>Natacion</h3>
+                </div>
             </div>
 
         </section>
@@ -179,7 +225,7 @@
         <div class="video1"><video autoplay muted loop src="../img/Video_Presentación_Gimnasio_Dinámico.mp4"></video></div>
         <div class="video2"><video autoplay muted loop src="../img/Video_Needs_More_Images.mp4"></video></div>
     </main> -->
-    
+
     <footer>
         <div class="redes">
             <h2>FITPOWER</h2>
@@ -209,7 +255,7 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-0 menu-lista">
                 <li class="nav-item"><a class="nav-link menu-enlace" href="../index.html">INICIO</a></li>
                 <li class="nav-item"><a class="nav-link menu-enlace" href="../pages/precios.html">PRECIO</a></li>
-                <li class="nav-item"><a class="nav-link menu-enlace" href="../pages/horarios.html">HORARIOS</a>    </li>
+                <li class="nav-item"><a class="nav-link menu-enlace" href="../pages/horarios.html">HORARIOS</a> </li>
                 <li class="nav-item"><a class="nav-link menu-enlace" href="../pages/galeria.html">GALERIA</a></li>
                 <li class="nav-item"><a class="nav-link menu-enlace" href="../pages/ubicacion.html">UBICACIONES</a></li>
             </ul>
@@ -231,4 +277,5 @@
         });
     </script>
 </body>
+
 </html>

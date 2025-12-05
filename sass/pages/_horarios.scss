@@ -69,7 +69,8 @@
                     cursor:pointer;
                     border-radius:30px;
                     padding:0.5rem;
-                    background:rgba(107, 106, 106, 0.347);
+                    background: #3a0068;
+                    // background:rgba(107, 106, 106, 0.347);
                     transition:transform 0.3s ease;
                     
                     p{
@@ -96,7 +97,7 @@
                     }
 
                     &:hover{
-                        background:rgba(128, 128, 128, 0.418);
+                        background: linear-gradient(90deg, #ff0080, #b026ff);
                         transform:translateY(-3px);
                         transition:transform 0.3s ease;
                     }

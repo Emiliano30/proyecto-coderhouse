@@ -1151,6 +1151,14 @@ rect.azul {
     text-shadow: 0 0 10px #b100ff, 0 0 20px #ff00ff, 0 0 40px #a000ff;
   }
 }
+@keyframes flip-vertical-fwd {
+  0% {
+    transform: translateZ(0) rotateY(0);
+  }
+  100% {
+    transform: translateZ(160px) rotateY(180deg);
+  }
+}
 /*HEADER*/
 .header .navegador {
   background-image: url("../img/Fondo_Header_Gimnasio_Alternativo.png");
@@ -2072,7 +2080,7 @@ footer .derechos {
   cursor: pointer;
   border-radius: 30px;
   padding: 0.5rem;
-  background: rgba(107, 106, 106, 0.347);
+  background: #3a0068;
   transition: transform 0.3s ease;
 }
 .page-horarios .horarios .btns .filtro div p {
@@ -2106,7 +2114,7 @@ footer .derechos {
   background-color: rgba(255, 152, 0, 0.631372549);
 }
 .page-horarios .horarios .btns .filtro div:hover {
-  background: rgba(128, 128, 128, 0.418);
+  background: linear-gradient(90deg, #ff0080, #b026ff);
   transform: translateY(-3px);
   transition: transform 0.3s ease;
 }
@@ -2276,25 +2284,41 @@ footer .derechos {
   color: whitesmoke;
 }
 
-.page-galeria .galeria-header {
+.page-galeria .galeria-container {
+  position: relative;
+  z-index: 4;
+}
+.page-galeria .galeria-container::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/fondo_pared_ladrillos_negro_neon.jpg");
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.1;
+  inset: 0;
+  z-index: -4;
+}
+.page-galeria .galeria-container .galeria-header {
   text-align: center;
   padding: 60px 20px;
+  opacity: 1;
 }
-.page-galeria .galeria-header h2 {
+.page-galeria .galeria-container .galeria-header h2 {
   font-size: 3rem;
 }
-.page-galeria .galeria-header p {
+.page-galeria .galeria-container .galeria-header p {
   color: #ddd;
   font-size: 1.1rem;
 }
-.page-galeria .galeria-header .galeria-filtros {
+.page-galeria .galeria-container .galeria-header .galeria-filtros {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 20px;
 }
-.page-galeria .galeria-header .galeria-filtros button {
+.page-galeria .galeria-container .galeria-header .galeria-filtros button {
   background: #3a0068;
   border: none;
   padding: 8px 20px;
@@ -2303,11 +2327,11 @@ footer .derechos {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.page-galeria .galeria-header .galeria-filtros button.activo, .page-galeria .galeria-header .galeria-filtros button:hover {
+.page-galeria .galeria-container .galeria-header .galeria-filtros button.activo, .page-galeria .galeria-container .galeria-header .galeria-filtros button:hover {
   background: linear-gradient(90deg, #ff0080, #b026ff);
   transform: scale(1.05);
 }
-.page-galeria .galeria-grid {
+.page-galeria .galeria-container .galeria-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
@@ -2315,7 +2339,7 @@ footer .derechos {
   max-width: 1800px;
   margin: auto;
 }
-.page-galeria .galeria-grid .card {
+.page-galeria .galeria-container .galeria-grid .card {
   position: relative;
   overflow: hidden;
   border-radius: 15px;
@@ -2324,18 +2348,18 @@ footer .derechos {
   transition: transform 0.3s;
   border: #3a0068 2px solid;
 }
-.page-galeria .galeria-grid .card:hover {
+.page-galeria .galeria-container .galeria-grid .card:hover {
   transform: scale(1.03);
 }
-.page-galeria .galeria-grid .card:hover .overlay {
+.page-galeria .galeria-container .galeria-grid .card:hover .overlay {
   opacity: 1;
 }
-.page-galeria .galeria-grid .card img, .page-galeria .galeria-grid .card video {
+.page-galeria .galeria-container .galeria-grid .card img, .page-galeria .galeria-container .galeria-grid .card video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.page-galeria .galeria-grid .card .overlay {
+.page-galeria .galeria-container .galeria-grid .card .overlay {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -2349,13 +2373,129 @@ footer .derechos {
   transition: opacity 0.4s;
   border-radius: 20px;
 }
-.page-galeria .galeria-grid .card .overlay h3 {
+.page-galeria .galeria-container .galeria-grid .card .overlay h3 {
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1rem;
 }
 
 .page-ubicaciones main {
   min-height: 100vh;
+}
+.page-ubicaciones main .banner {
+  height: 200px;
+  position: relative;
+  z-index: 4;
+  width: 100%;
+}
+.page-ubicaciones main .banner video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+.page-ubicaciones main .banner h2 {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+}
+.page-ubicaciones main .contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 3rem 0;
+}
+.page-ubicaciones main .contenedor .tarjeta {
+  background: rgba(4, 0, 7, 0.297);
+  color: #fff;
+  text-align: center;
+  border-top: 5px solid rgba(232, 6, 198, 0.8274509804);
+  height: 300px;
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(123, 7, 106, 0.797);
+  perspective: 1000px;
+}
+.page-ubicaciones main .contenedor .tarjeta.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+.page-ubicaciones main .contenedor .tarjeta .card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.page-ubicaciones main .contenedor .tarjeta .card-inner .card-front, .page-ubicaciones main .contenedor .tarjeta .card-inner .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.page-ubicaciones main .contenedor .tarjeta .card-inner .card-front .card-title {
+  font-size: 1.5rem;
+}
+.page-ubicaciones main .contenedor .tarjeta .card-inner .card-front .card-body {
+  padding-top: 2rem;
+}
+.page-ubicaciones main .contenedor .tarjeta .card-inner .card-front .img {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+}
+.page-ubicaciones main .contenedor .tarjeta .card-inner .card-front .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+  border-radius: 0 0 15px 15px;
+}
+.page-ubicaciones main .contenedor .tarjeta .card-inner .card-front .img button {
+  display: inline-block;
+  padding: 0.1rem 2rem;
+  position: absolute;
+  border-radius: 15px;
+  border: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #3a0068;
+  color: #fff;
+  cursor: pointer;
+}
+.page-ubicaciones main .contenedor .tarjeta .card-inner .card-front .img button:hover {
+  background: linear-gradient(90deg, #ff0080, #b026ff);
+}
+.page-ubicaciones main .contenedor .tarjeta .card-inner .card-back {
+  top: 0px;
+  transform: rotateY(180deg);
+  width: 270px;
+  height: 250px;
+}
+.page-ubicaciones main .contenedor .tarjeta .card-inner .card-back iframe {
+  width: 90%;
+  height: 90%;
+  border-radius: 15px;
+}
+.page-ubicaciones main .contenedor .tarjeta .card-inner .card-back button {
+  margin-top: 0.3rem;
+  display: inline-block;
+  padding: 0.1rem 2rem;
+  border-radius: 15px;
+  border: none;
+  color: #fff;
+  background: #3a0068;
+}
+.page-ubicaciones main .contenedor .tarjeta .card-inner .card-back button:hover {
+  background: linear-gradient(90deg, #ff0080, #b026ff);
 }
 
 @media screen and (min-width: 768px) {
@@ -2571,6 +2711,35 @@ footer .derechos {
   .page-galeria .galeria-grid .card-13 {
     grid-area: card-13;
   }
+  .page-ubicaciones main .contenedor {
+    padding-top: 6rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5rem;
+  }
+  .page-ubicaciones main .contenedor .tarjeta {
+    width: 300px;
+    height: 400px;
+    padding-top: 2rem;
+  }
+  .page-ubicaciones main .contenedor .tarjeta .card-inner .card-front .card-body {
+    padding-top: 4rem;
+  }
+  .page-ubicaciones main .contenedor .tarjeta .card-inner .card-front .img {
+    width: 100%;
+    height: 130px;
+  }
+  .page-ubicaciones main .contenedor .tarjeta .card-inner .card-front .img button {
+    padding: 0.3rem 3rem;
+  }
+  .page-ubicaciones main .contenedor .tarjeta .card-inner .card-back {
+    width: 300px;
+    height: 330px;
+  }
+  .page-ubicaciones main .contenedor .tarjeta .card-inner .card-back button {
+    margin-top: 0.5rem;
+    padding: 0.3rem 3rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   /*HEADER*/
@@ -2755,8 +2924,32 @@ footer .derechos {
   .page-horarios .contenedor .columna-dia .class-card .class-details .book-btn {
     padding: 0.2rem;
   }
-  .page-galeria .galeria-grid {
+  .page-galeria .galeria-container .galeria-grid {
     grid-template-areas: "card-8 card-8 card-2" "card-7 card-13 card-13" "card-7 card-6 card-5" "card-4 card-4 card-5" "card-1 card-1 card-9" "card-10 card-11 card-12" "card-10 card-3 card-12";
+  }
+  .page-galeria .galeria-container .galeria-grid .card .overlay h3 {
+    font-size: 1.5rem;
+  }
+  .page-ubicaciones main .banner {
+    height: 350px;
+  }
+  .page-ubicaciones main .contenedor {
+    justify-content: space-evenly;
+  }
+  .page-ubicaciones main .contenedor .tarjeta {
+    width: 350px;
+    height: 450px;
+  }
+  .page-ubicaciones main .contenedor .tarjeta .card-inner .card-front .img button {
+    padding: 0.4rem 3rem;
+  }
+  .page-ubicaciones main .contenedor .tarjeta .card-inner .card-back {
+    width: 350px;
+    height: 370px;
+  }
+  .page-ubicaciones main .contenedor .tarjeta .card-inner .card-back button {
+    margin-top: 0.9rem;
+    padding: 0.4rem 3rem;
   }
 }
 
